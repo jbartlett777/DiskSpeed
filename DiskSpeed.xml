@@ -15,7 +15,7 @@
   <Icon>https://raw.githubusercontent.com/jbartlett777/DiskSpeed/master/DiskSpeed.png</Icon>
   <ExtraParams/>
   <PostArgs/>
-  <DateInstalled>1522898414</DateInstalled>
+  <DateInstalled>1522949191</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <DonateImg/>
@@ -44,7 +44,7 @@
     </Volume>
   </Data>
   <Environment/>
-  <Config Name="Web Port" Target="8888" Default="18888" Mode="tcp" Description="Server Port used to access the DiskSpeed web site. Be sure to change the port in the WebUI under Advanced Settings if you change this." Type="Port" Display="always-hide" Required="true" Mask="false">18888</Config>
+  <Config Name="Web Port" Target="8888" Default="18888" Mode="tcp" Description="Host Port used to access the DiskSpeed web site." Type="Port" Display="always-hide" Required="true" Mask="false">18888</Config>
   <Config Name="Local Storage" Target="/tmp/DiskSpeed" Default="" Mode="rw" Description="External storage location to store persistent data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/DiskSpeed/</Config>
   <Config Name="unRAID ini Files" Target="/var/local/emhttp" Default="/var/local/emhttp" Mode="ro" Description="Location of unRAID ini files" Type="Path" Display="advanced-hide" Required="false" Mask="false">/var/local/emhttp</Config>
 </Container>
