@@ -6,7 +6,7 @@
   <Network>bridge</Network>
   <MyIP/>
   <Privileged>true</Privileged>
-  <Support>https://lime-technology.com/forums/topic/70636-beta-diskspeed-hard-drive-benchmarking-unraid-6/</Support>
+  <Support>https://forums.unraid.net/topic/70636-diskspeed</Support>
   <Project/>
   <Overview>Display drives attached to controllers and perform benchmark speed tests. Performing the occasional benchmark will help you determine if a drive is starting to fail even if the SMART logic isn't flagging errors as of yet. Privileged mode is required for this application to function and see the storage controllers &amp;amp; drives attached to the host machine.</Overview>
   <Category>Tools: Status:Stable</Category>
