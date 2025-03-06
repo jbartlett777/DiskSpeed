@@ -21,6 +21,12 @@ and will indicate if a drive is failing if a benchmark is showing slower speeds 
 
 DiskSpeed will only perform read tests on a drive, not write tests.
 
+**Benchmark with multiple like models and an unlike model**
+
+Parity scans will operate at the speed of the slowest drive in the array. Even though drive "data6 (sdg)" has a clear speed advantage over the other drives, it will not impact any parity scan as it'll be slowed down to match the others.
+
+<a href="https://www.strangejourney.net/github/diskspeed/SpinnerBenchmark1.png" target="_blank"><img src="https://www.strangejourney.net/github/diskspeed/SpinnerBenchmark1_thumb.png"></a><br>
+
 ## Benchmarking Solid State Drives
 
 Benchmarking solid state drives can't be done the same way as a hard drive. You can ask to read the drive at a given location but most SSD's will not even attempt to do so if that location has never been written to, leading to impossibly high speed results.
@@ -29,4 +35,7 @@ In order to test, large files with random data need to be written to the drive a
 During the write phase, up to 15 sets files are created and the write speeds are compared to the previous ones. Each set of files is comprised of four files that are written simultaneously that combined equal the total requested test set size. For NVMe drives,
 the set defaults to 4GB and for SATA SSD drives, 1 GB. If enough files have the same write speed in a row, the write phase is ended early if 15 files haven't been written yet. After a short pause to allow any hidden caching to finish writing the data.
 
-*** work in progress ***
+**SSD Benchmark Results**
+
+<a href="https://www.strangejourney.net/github/diskspeed/SSDBenchmark1.png" target="_blank"><img src="https://www.strangejourney.net/github/diskspeed/SSDBenchmark1_thumb.png"></a>
+<a href="https://www.strangejourney.net/github/diskspeed/SSDBenchmark2.png" target="_blank"><img src="https://www.strangejourney.net/github/diskspeed/SSDBenchmark2_thumb.png"></a>
