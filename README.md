@@ -27,6 +27,11 @@ Parity scans will operate at the speed of the slowest drive in the array. Even t
 
 <a href="https://www.strangejourney.net/github/diskspeed/SpinnerBenchmark1.png" target="_blank"><img src="https://www.strangejourney.net/github/diskspeed/SpinnerBenchmark1_thumb.png"></a><br>
 
+Viewing an hard drive will display specific information derived from the drive itself. If the drive doesn't reveal it's RPM, a micro-benchmark is done to reveal it. WD-Green drives are known for this.
+You can compare benchmarks taken at different dates to see if the drive is starting to perform poorly. Such signs of aging might not be evident in the SMART reports but can show up as a dip in a spot on the drive's read rate.
+
+<a href="https://www.strangejourney.net/github/diskspeed/SpinnerBenchmark2.png" target="_blank"><img src="https://www.strangejourney.net/github/diskspeed/SpinnerBenchmark2_thumb.png"></a><br>
+
 ## Benchmarking Solid State Drives
 
 Benchmarking solid state drives can't be done the same way as a hard drive. You can ask to read the drive at a given location but most SSD's will not even attempt to do so if that location has never been written to, leading to impossibly high speed results.
@@ -39,3 +44,10 @@ the set defaults to 4GB and for SATA SSD drives, 1 GB. If enough files have the 
 
 <a href="https://www.strangejourney.net/github/diskspeed/SSDBenchmark1.png" target="_blank"><img src="https://www.strangejourney.net/github/diskspeed/SSDBenchmark1_thumb.png"></a>
 <a href="https://www.strangejourney.net/github/diskspeed/SSDBenchmark2.png" target="_blank"><img src="https://www.strangejourney.net/github/diskspeed/SSDBenchmark2_thumb.png"></a>
+
+After bnechmarking a SSD, you can view the details of each set of files by clicking on the drive's icon.
+
+<a href="https://www.strangejourney.net/github/diskspeed/SSDBenchmark3.png" target="_blank"><img src="https://www.strangejourney.net/github/diskspeed/SSDBenchmark3_thumb.png"></a>
+
+From these results, you can surmise that the drive either does not have any built-in cache or it honored the request to disable cache writes. If you see higher bars at the start and then dropping significantly, the drive is caching it's writes and ignoring the
+cache bypass directive, typically to boost perceived performance..
