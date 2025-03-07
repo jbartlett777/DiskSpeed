@@ -1,5 +1,7 @@
 # Hard Drive & Controller Benchmarking
 
+Jump to [installation instructions](#installation-instructions)
+
 DiskSpeed is a Lucee application running in a Docker container that can perform benchmarking of system controllers & hard drives.
 
 <a href="https://www.strangejourney.net/github/diskspeed/DiskSpeed_Main.png" target="_blank"><img src="https://www.strangejourney.net/github/diskspeed/DiskSpeed_Main_thumb.png"></a><br>
@@ -12,7 +14,7 @@ Drive controllers are identified and the ports scanned to see what drives, if an
 then reading all drives simultaneously and comparing the results. If the simultaneous scan is showing lower read rates, it is possible for it to bottleneck. On the UNRAID OS, performing a parity scan on the UNRAID array involves reading all drives at the same
 time and thus a controller bottleneck will increase the duration of the scan.
 
-<a href="https://www.strangejourney.net/github/diskspeed/Controller_Benchmark.png" target="_blank"><img src="https://www.strangejourney.net/github/diskspeed/Controller_Benchmark_thumb.png"></a><br>
+<a href="https://www.strangejourney.net/github/diskspeed/Controller_Benchmark.png" target="_blank"><img src="https://www.strangejourney.net/github/diskspeed/Controller_Benchmark_thumb.png"></a>
 
 ## Benchmarking Hard Drives
 
@@ -25,12 +27,13 @@ DiskSpeed will only perform read tests on a drive, not write tests.
 
 Parity scans will operate at the speed of the slowest drive in the array. Even though drive "data6 (sdg)" has a clear speed advantage over the other drives, it will not impact any parity scan as it'll be slowed down to match the others.
 
-<a href="https://www.strangejourney.net/github/diskspeed/SpinnerBenchmark1.png" target="_blank"><img src="https://www.strangejourney.net/github/diskspeed/SpinnerBenchmark1_thumb.png"></a><br>
+<a href="https://www.strangejourney.net/github/diskspeed/SpinnerBenchmark1.png" target="_blank"><img src="https://www.strangejourney.net/github/diskspeed/SpinnerBenchmark1_thumb.png"></a>
+<a href="https://www.strangejourney.net/github/diskspeed/SpinnerBenchmark3.png" target="_blank"><img src="https://www.strangejourney.net/github/diskspeed/SpinnerBenchmark3_thumb.png"></a>
 
 Viewing an hard drive will display specific information derived from the drive itself. If the drive doesn't reveal it's RPM, a micro-benchmark is done to reveal it. WD-Green drives are known for this.
 You can compare benchmarks taken at different dates to see if the drive is starting to perform poorly. Such signs of aging might not be evident in the SMART reports but can show up as a dip in a spot on the drive's read rate.
 
-<a href="https://www.strangejourney.net/github/diskspeed/SpinnerBenchmark2.png" target="_blank"><img src="https://www.strangejourney.net/github/diskspeed/SpinnerBenchmark2_thumb.png"></a><br>
+<a href="https://www.strangejourney.net/github/diskspeed/SpinnerBenchmark2.png" target="_blank"><img src="https://www.strangejourney.net/github/diskspeed/SpinnerBenchmark2_thumb.png"></a>
 
 ## Benchmarking Solid State Drives
 
@@ -51,3 +54,5 @@ After bnechmarking a SSD, you can view the details of each set of files by click
 
 From these results, you can surmise that the drive either does not have any built-in cache or it honored the request to disable cache writes. If you see higher bars at the start and then dropping significantly, the drive is caching it's writes and ignoring the
 cache bypass directive, typically to boost perceived performance..
+
+## installation instructions
