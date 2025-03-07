@@ -63,7 +63,7 @@ cache bypass directive, typically to boost perceived performance..
 
 The best & easiest way to install applications is using UNRAID's Community Apps. Search for DiskSpeed and then click on the Install button for it.
 
-<img src="https://www.strangejourney.net/github/diskspeed/InstallCA.png">
+<img src="https://www.strangejourney.net/github/diskspeed/InstallCommunityApp.png">
 
 ### UNRAID Manual Install
 
