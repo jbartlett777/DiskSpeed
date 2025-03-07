@@ -59,7 +59,7 @@ it's writes and ignoring the cache bypass directive, typically to boost perceive
 > [!IMPORTANT]
 > SSDs formatted with ZFS may not reflect true performance due to ZFS's built-in caching mechanisms that currently can't be fully bypassed.
 
-## installation instructions
+## Installation Instructions
 
 ### UNRAID Community Applications
 
