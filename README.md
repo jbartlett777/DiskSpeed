@@ -7,12 +7,12 @@ DiskSpeed is a Lucee application running in a Docker container that can perform 
 <a href="https://www.strangejourney.net/github/diskspeed/DiskSpeed_Main.png" target="_blank"><img src="https://www.strangejourney.net/github/diskspeed/DiskSpeed_Main_thumb.png"></a><br>
 (click thumbnails for larger images)
 
-DiskSpeed was designed to run on UNRAID and has support for the UNRAID OS but should also work fine under any unix OS. Windows is not supported as the app requires privliged mode in order to scan the hardware which Windows does not support.
+DiskSpeed was designed to run on UNRAID and has support for the UNRAID OS but should also work fine under any unix OS. Windows is not supported as the app requires privileged mode in order to scan the hardware which Windows does not support.
 
 ## Drive Controller Benchmarking
-Drive controllers are identified and the ports scanned to see what drives, if any, are attached. The controller can be tested to see if the drives attached are capable of saturating its bandwidth by performing a 15 second benchmark on each drive in sequence,
-then reading all drives simultaneously and comparing the results. If the simultaneous scan is showing lower read rates, it is possible for it to bottleneck. On the UNRAID OS, performing a parity scan on the UNRAID array involves reading all drives at the same
-time and thus a controller bottleneck will increase the duration of the scan.
+Drive controllers are identified and the ports scanned to see what drives, if any, are attached. The controller can be tested to see if the drives attached are capable of saturating its bandwidth by performing a 15 second benchmark on each
+drive in sequence, then reading all drives simultaneously and comparing the results. If the simultaneous scan is showing lower read rates, it is possible for it to bottleneck. On the UNRAID OS, performing a parity scan on the UNRAID array
+involves reading all drives at the same time and thus a controller bottleneck will increase the duration of the scan.
 
 <a href="https://www.strangejourney.net/github/diskspeed/Controller_Benchmark.png" target="_blank"><img src="https://www.strangejourney.net/github/diskspeed/Controller_Benchmark_thumb.png"></a>
 
@@ -40,22 +40,24 @@ You can compare benchmarks taken at different dates to see if the drive is start
 Benchmarking solid state drives can't be done the same way as a hard drive. You can ask to read the drive at a given location but most SSD's will not even attempt to do so if that location has never been written to, leading to impossibly high speed results.
 In order to test, large files with random data need to be written to the drive and then read back. This could arguably decrease the lifespan of the SSD so be aware of that, though I would also argue that the wear & tear is negligible.
 
-During the write phase, up to 15 sets files are created and the write speeds are compared to the previous ones. Each set of files is comprised of four files that are written simultaneously that combined equal the total requested test set size. For NVMe drives,
-the set defaults to 4GB and for SATA SSD drives, 1 GB. If enough files have the same write speed in a row, the write phase is ended early if 15 files haven't been written yet. After a short pause to allow any hidden caching to finish writing the data.
+During the write phase, up to 15 sets files are created and the write speeds are compared to the previous ones. Each set of files is comprised of four files that are written simultaneously that combined equal the total requested test
+set size. For NVMe drives, the set defaults to 4GB and for SATA SSD drives, 1 GB. If enough files have the same write speed in a row, the write phase is ended early if 15 files haven't been written yet. After a short pause to allow
+any hidden caching to finish writing the data.
 
 **SSD Benchmark Results**
 
 <a href="https://www.strangejourney.net/github/diskspeed/SSDBenchmark1.png" target="_blank"><img src="https://www.strangejourney.net/github/diskspeed/SSDBenchmark1_thumb.png"></a>
 <a href="https://www.strangejourney.net/github/diskspeed/SSDBenchmark2.png" target="_blank"><img src="https://www.strangejourney.net/github/diskspeed/SSDBenchmark2_thumb.png"></a>
 
-After bnechmarking a SSD, you can view the details of each set of files by clicking on the drive's icon.
+After benchmarking a SSD, you can view the details of each set of files by clicking on the drive's icon.
 
 <a href="https://www.strangejourney.net/github/diskspeed/SSDBenchmark3.png" target="_blank"><img src="https://www.strangejourney.net/github/diskspeed/SSDBenchmark3_thumb.png"></a>
 
-From these results, you can surmise that the drive either does not have any built-in cache or it honored the request to disable cache writes. If you see higher bars at the start and then dropping significantly, the drive is caching it's writes and ignoring the
-cache bypass directive, typically to boost perceived performance..
+From these results, you can surmise that the drive either does not have any built-in cache or it honored the request to disable cache writes. If you see higher bars at the start and then dropping significantly, the drive is caching
+it's writes and ignoring the cache bypass directive, typically to boost perceived performance..
 
-
+> [!IMPORTANT]
+> SSDs formatted with ZFS may not reflect true performance due to ZFS's built-in caching mechanisms that currently can't be fully bypassed.
 
 ## installation instructions
 
