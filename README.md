@@ -55,4 +55,52 @@ After bnechmarking a SSD, you can view the details of each set of files by click
 From these results, you can surmise that the drive either does not have any built-in cache or it honored the request to disable cache writes. If you see higher bars at the start and then dropping significantly, the drive is caching it's writes and ignoring the
 cache bypass directive, typically to boost perceived performance..
 
+
+
 ## installation instructions
+
+### UNRAID Community Applications
+
+The best & easiest way to install applications is using UNRAID's Community Apps. Search for DiskSpeed and then click on the Install button for it.
+
+<img src="https://www.strangejourney.net/github/diskspeed/InstallCA.png">
+
+### UNRAID Manual Install
+
+Add a new Docker application with the following settings:<br>
+**Name:** DiskSpeed<br>
+**Repository:** jbartlett777/diskspeed<br>
+**Network Type:** Bridge<br>
+**Use Tailscale:** No<br>
+**Console shell command:** (No preference)<br>
+**Privileged:** Yes. This docker app scans the hardware subsystems to determine the store & drive configurations which requires Privileged set on<br>
+**Web Port:** 18888 (you can choose any)<br>
+
+#### Add another Path, Port, Variable, Label or Device:<br>
+**Config Type:** Path<br>
+**Name:** Local Storage<br>
+**Container Path:** /tmp/DiskSpeed<br>
+**Host Path:** /mnt/user/appdata/DiskSpeed/<br>
+**Default Value:** _leave blank_<br>
+**Access Mode:** Read/Write<br>
+**Description:** External storage location to store persistent data
+
+
+#### Add another Path, Port, Variable, Label or Device:<br>
+**Config Type:** Path<br>
+**Name:** UNRAID<br>
+**Container Path:** /mnt/UNRAID<br>
+**Host Path:** /mnt<br>
+**Default Value:** _leave blank_<br>
+**Access Mode:** Read/Write<br>
+**Description:** _Create this variable if you want to benchmark SSD drives_
+
+
+#### Add another Path, Port, Variable, Label or Device:<br>
+**Config Type:** Path<br>
+**Name:** unRAID ini Files<br>
+**Container Path:** /var/local/emhttp<br>
+**Host Path:** /var/local/emhttp<br>
+**Default Value:** /var/local/emhttp<br>
+**Access Mode:** Read/Only<br>
+**Description:** Location of unRAID ini files
