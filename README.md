@@ -68,7 +68,7 @@ The best & easiest way to install applications is using UNRAID's Community Apps.
 ### UNRAID Manual Install
 
 Add a new Docker application with the following settings:<br>
-**Name:** DiskSpeed<br>
+> **Name:** DiskSpeed<br>
 **Repository:** jbartlett777/diskspeed<br>
 **Network Type:** Bridge<br>
 **Use Tailscale:** No<br>
@@ -77,7 +77,7 @@ Add a new Docker application with the following settings:<br>
 **Web Port:** 18888 (you can choose any)<br>
 
 #### Add another Path, Port, Variable, Label or Device:<br>
-**Config Type:** Path<br>
+> **Config Type:** Path<br>
 **Name:** Local Storage<br>
 **Container Path:** /tmp/DiskSpeed<br>
 **Host Path:** /mnt/user/appdata/DiskSpeed/<br>
@@ -85,9 +85,8 @@ Add a new Docker application with the following settings:<br>
 **Access Mode:** Read/Write<br>
 **Description:** External storage location to store persistent data
 
-
 #### Add another Path, Port, Variable, Label or Device:<br>
-**Config Type:** Path<br>
+> **Config Type:** Path<br>
 **Name:** UNRAID<br>
 **Container Path:** /mnt/UNRAID<br>
 **Host Path:** /mnt<br>
@@ -95,12 +94,18 @@ Add a new Docker application with the following settings:<br>
 **Access Mode:** Read/Write<br>
 **Description:** _Create this variable if you want to benchmark SSD drives_
 
-
 #### Add another Path, Port, Variable, Label or Device:<br>
-**Config Type:** Path<br>
+> **Config Type:** Path<br>
 **Name:** unRAID ini Files<br>
 **Container Path:** /var/local/emhttp<br>
 **Host Path:** /var/local/emhttp<br>
 **Default Value:** /var/local/emhttp<br>
 **Access Mode:** Read/Only<br>
 **Description:** Location of unRAID ini files
+
+### Docker CLI
+
+```
+docker create --name='DiskSpeed' --net='bridge' ---privileged=true -p '18888:8888/tcp' -v '/mnt/user/appdata/DiskSpeed/':'/tmp/DiskSpeed':'rw' -v '/mnt':'/mnt/UNRAID':'rw' -v '/var/local/emhttp':'/var/local/emhttp':'ro' 'jbartlett777/diskspeed'
+```
+
