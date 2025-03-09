@@ -1,6 +1,8 @@
 # Hard Drive & Controller Benchmarking
 
-Jump to [installation instructions](#installation-instructions)
+Jump to
+- [installation instructions](#installation-instructions)
+- [Harddrive Database (HDDB)](#harddrive-database-hddb)
 
 DiskSpeed is a Lucee application running in a Docker container that can perform benchmarking of system controllers & hard drives.
 
@@ -59,6 +61,13 @@ it's writes and ignoring the cache bypass directive, typically to boost perceive
 > [!IMPORTANT]
 > SSDs formatted with ZFS may not reflect true performance due to ZFS's built-in caching mechanisms that currently can't be fully bypassed.
 
+## Customizing Drive Image
+
+The [Harddrive Database](https://www.strangejourney.net/hddb/) has many drive images you can use if you don't like the default one or you can upload your own - such as there is no image in the HDDB available for your drive and you
+see the default gray drive icon. Clicking on a drive to view its details, you can click on the "Edit Drive" button to customize the image or add a text overlay with the capacity if it's not given in the image.
+
+<img src="https://www.strangejourney.net/github/diskspeed/EditDrive.png">
+
 ## Installation Instructions
 
 ### UNRAID Community Applications
@@ -111,3 +120,12 @@ Add a new Docker application with the following settings:<br>
 docker create --name='DiskSpeed' --net='bridge' ---privileged=true -p '18888:8888/tcp' -v '/mnt/user/appdata/DiskSpeed/':'/tmp/DiskSpeed':'rw' -v '/mnt':'/mnt/UNRAID':'rw' -v '/var/local/emhttp':'/var/local/emhttp':'ro' 'jbartlett777/diskspeed'
 ```
 
+## Harddrive Database (HDDB)
+
+Diskspeed Users can upload benchmarks to the HDDB to contribute to the performance statistics of the drives (in addition to being able to recover the benchmarks if they delete the app & reinstall later).
+You can see how different revisions of the same model perform against each other and it's also clear not all drives with the same model are created equal. You can also see this drive has the typical Seagate dip at the
+start of the drive - which is odd in its own right because drives are supposed to be faster at the start. Seagate's dip runs up to around 50 MB into the drive.
+
+<img src="https://www.strangejourney.net/github/diskspeed/hddb_st4000dm000.png">
+
+You can view the HDDB at https://www.strangejourney.net/hddb/
