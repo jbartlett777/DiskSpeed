@@ -8,6 +8,7 @@
   <Privileged>true</Privileged>
   <Support>https://forums.unraid.net/topic/70636-diskspeed</Support>
   <Project/>
+  <ExtraSearchTerms>speedtest</ExtraSearchTerms>
   <Overview>Display drives attached to controllers and perform benchmark speed tests. Performing the occasional benchmark will help you determine if a drive is starting to fail even if the SMART logic isn't flagging errors as of yet. Privileged mode is required for this application to function and see the storage controllers &amp;amp; drives attached to the host machine.</Overview>
   <Category>Tools: Status:Stable</Category>
   <WebUI>http://[IP]:[PORT:8888]/</WebUI>
