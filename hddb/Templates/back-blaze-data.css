@@ -1,0 +1,13 @@
+.back-blaze-data-container {
+  width: 100%;
+  display: flex;
+  max-height: 100vh;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  background-size: auto;
+  background-color: var(--dl-color-theme-neutral-dark);
+  background-image: url('http://strangejourney.net/hddb/images/hddb_banner.png');
+  background-repeat: no-repeat;
+  background-position: top left;
+}
