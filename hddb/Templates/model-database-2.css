@@ -1,0 +1,75 @@
+.model-database2-container {
+  color: white;
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  
+}
+.model-database2-container1 {
+  color: var(--dl-color-gray-white);
+  width: 100vw;
+  height: 100vh;
+  flex-wrap: wrap;
+  font-size: large;
+  min-width: 85vw;
+  align-self: flex-start;
+  overflow-y: auto;
+  align-items: flex-start;
+  padding-left: var(--dl-space-space-unit);
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.model-database2-container2 {
+  flex: 0 0 auto;
+  width: 99vw;
+  height: 99vh;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.model-database2-text {
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  padding-bottom: var(--dl-space-space-unit);
+}
+.model-database2-container3 {
+  width: 97vw;
+  height: 97vh;
+  overflow-y: clip;
+}
+.model-database2-container4 {
+  flex: 0 0 auto;
+  height: 2em;
+  display: flex;
+  max-height: 2em;
+  min-height: 2em;
+  align-items: flex-start;
+  margin-bottom: 0px;
+  flex-direction: column;
+}
+.model-database2-text1 {
+  font-size: 24px;
+}
+.model-database2-container7 {
+  flex: 0 0 auto;
+  display: flex;
+  margin-top: var(--dl-space-space-unit);
+  min-height: 66px;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.model-database2-text3 {
+  font-size: 24px;
+}
+.model-database2-text4 {
+  font-size: 14px;
+  font-weight: bold;
+}
+.model-database2-text5 {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}

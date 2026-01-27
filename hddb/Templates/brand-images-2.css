@@ -1,0 +1,30 @@
+.brand-images2-container {
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.brand-images2-container1 {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.brand-images2-text {
+  color: var(--dl-color-gray-white);
+  font-size: 40px;
+  padding-left: var(--dl-space-space-unit);
+  padding-bottom: var(--dl-space-space-unit);
+}
+.brand-images2-text1 {
+  min-width: 128px;
+  align-self: center;
+  font-style: normal;
+  text-align: center;
+  font-weight: 400;
+}
+
+
+
+
+
