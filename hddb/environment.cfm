@@ -1,6 +1,6 @@
 <CFSET RootDir=Replace(ExpandPath("."),"\","/","ALL")>
 <CFSET ParentDir=ListDeleteAt(RootDir,ListLen(RootDir,"/"),"/")>
-<CFSET DSN="mysql">
+<CFSET DSN="diskspeed">
 <CFSET Highcharts="/Highcharts-9.0.0">
 <CFSET HeatMapX=400>
 <CFSET HeatMapY=100>

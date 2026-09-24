@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Brand-Images - HDDB</title>
-    <meta property="og:title" content="Brand-Images - HDDB" />
+    <title>Brand-Images - Hard drive database</title>
+    <meta
+      name="description"
+      content="Hard drive benchmark and performance data"
+    />
+    <meta property="og:title" content="Brand-Images - Hard drive database" />
+    <meta
+      property="og:description"
+      content="Hard drive benchmark and performance data"
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:title" content="Brand-Images - Hard drive database" />
+    <meta
+      name="twitter:description"
+      content="Hard drive benchmark and performance data"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
     <style data-tag="reset-style-sheet">
-      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}pre {  white-space: normal;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
     </style>
     <style data-tag="default-style-sheet">
       html {
@@ -24,14 +40,14 @@
         letter-spacing: normal;
         line-height: 1.15;
         color: var(--dl-color-gray-black);
-        background-color: var(--dl-color-gray-white);
+        
 
-        null
+        fill: var(--dl-color-gray-black);
       }
     </style>
     <link
       rel="stylesheet"
-      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css?cb=20260921210904"
     />
     <link
       rel="stylesheet"
@@ -50,30 +66,152 @@
     />
     <link
       rel="stylesheet"
-      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css?cb=20260921210904"
     />
+    <style>
+      a:has(> [class*="-thq-product-card-elm"]) { display: contents; }
+      [class*="-thq-product-item-wrapper-elm"] > a { display: contents; }
+    </style>
+    <style>
+      a:focus-visible,
+      button:focus-visible,
+      input:focus-visible,
+      select:focus-visible,
+      textarea:focus-visible,
+      summary:focus-visible,
+      [tabindex]:focus-visible,
+      [role="button"]:focus-visible,
+      [role="link"]:focus-visible,
+      [role="radio"]:focus-visible,
+      [role="checkbox"]:focus-visible,
+      [role="tab"]:focus-visible,
+      [role="menuitem"]:focus-visible {
+        outline: 2px solid var(--color-primary, #2563eb);
+        outline-offset: 2px;
+      }
+      [role="radio"]:focus-visible {
+        outline-offset: 0;
+      }
+      [tabindex="-1"]:focus-visible {
+        outline: none;
+      }
+      .tq-skip-link {
+        position: fixed;
+        top: -100px;
+        left: 8px;
+        z-index: 100000;
+        padding: 10px 16px;
+        border-radius: 0 0 6px 6px;
+        background: var(--color-primary, #2563eb);
+        color: var(--color-on-primary, #ffffff);
+        font: 600 14px/1.2 system-ui, -apple-system, "Segoe UI", sans-serif;
+        text-decoration: none;
+        transition: top 0.15s ease;
+      }
+      .tq-skip-link:focus {
+        top: 0;
+      }
+    </style>
+
+    <script>
+      (function () {
+        if (window.__tqSkipLink) { return; }
+        window.__tqSkipLink = true;
+
+        var TARGET_ID = 'tq-main';
+        var CHROME = 'header, nav, footer, [role="banner"], [role="contentinfo"], .tq-skip-link';
+
+        function appRoot() {
+          return document.getElementById('__next') || document.body;
+        }
+
+        function resolveTarget() {
+          var root = appRoot();
+          if (!root) { return null; }
+          var landmark = root.querySelector('main, [role="main"]');
+          if (landmark) { return landmark; }
+          // A page root holding [nav, section, section, …, footer]: the content
+          // starts at the first child that is not chrome.
+          var page = root.firstElementChild || root;
+          var children = page.children || [];
+          for (var i = 0; i < children.length; i++) {
+            if (!children[i].matches(CHROME)) { return children[i]; }
+          }
+          return page;
+        }
+
+        function ensureTarget() {
+          var target = resolveTarget();
+          if (!target) { return null; }
+          if (!target.id) { target.id = TARGET_ID; }
+          // Without this the browser scrolls to the anchor but leaves focus at the
+          // top of the page, so the next Tab walks back into the navigation.
+          if (!target.hasAttribute('tabindex')) { target.setAttribute('tabindex', '-1'); }
+          return target;
+        }
+
+        function ensureLink() {
+          var existing = document.querySelector('.tq-skip-link');
+          var target = ensureTarget();
+          if (!target) { return; }
+          var href = '#' + target.id;
+          if (existing) { existing.setAttribute('href', href); return; }
+          var link = document.createElement('a');
+          link.className = 'tq-skip-link';
+          link.setAttribute('href', href);
+          link.textContent = 'Skip to content';
+          // Before the app's own root, so it is first in the document without
+          // moving anything the app rendered.
+          var root = appRoot();
+          if (root && root.parentNode) {
+            root.parentNode.insertBefore(link, root);
+          } else {
+            document.body.insertBefore(link, document.body.firstChild);
+          }
+        }
+
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', ensureLink);
+        } else {
+          ensureLink();
+        }
+
+        // A client-side route change swaps the page's content, so the target the link
+        // points at has to be resolved again.
+        if (typeof MutationObserver !== 'undefined') {
+          var pending = false;
+          new MutationObserver(function () {
+            if (pending) { return; }
+            pending = true;
+            window.requestAnimationFrame(function () { pending = false; ensureLink(); });
+          }).observe(document.documentElement, { subtree: true, childList: true });
+        }
+      })();
+    </script>
   </head>
   <body>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./style.css?cb=20260921210904" />
     <div>
-      <link href="./brand-images.css" rel="stylesheet" />
+      <link href="./brand-images.css?cb=20260921210904" rel="stylesheet" />
 
-      <div class="brand-images-container">
-        <div class="brand-images-banner">
-          <a href="index.html" class="brand-images-navlink">
+      <div class="brand-images-container1">
+        <div id="tq-main" role="main" class="brand-images-thq-banner-elm">
+          <a href="index.html" class="brand-images-navlink1">
             <h1 class="brand-images-text TextBorder">Hard Drive Database</h1>
           </a>
-          <div class="brand-images-btn-group">
-            <a href="brand-images.html" class="brand-images-navlink1 button">
+          <div class="brand-images-thq-btn-group-elm">
+            <a href="brand-images.html" class="brand-images-navlink2 button">
               Brand Images
             </a>
-            <a href="model-database.html" class="brand-images-navlink2 button">
+            <a href="model-database.html" class="brand-images-navlink3 button">
               Model Database
             </a>
-
+            <a href="back-blaze-data.html" class="brand-images-navlink4 button">
+              BackBlaze Data
+            </a>
           </div>
-          <div class="brand-images-container1">
-            <div class="brand-images-container2">
+          <div class="brand-images-container2">
+            <div class="brand-images-container3">
               <a
                 href="https://BrandImages.cfm?Model=[x]"
                 id="BrandName"
@@ -84,7 +222,7 @@
                 Western Digital
               </a>
             </div>
-            <div class="brand-images-container3">
+            <div class="brand-images-container4">
               <iframe
                 id="ModelFrame"
                 src="https://www.johnwbartlett.com"
@@ -94,6 +232,357 @@
           </div>
         </div>
       </div>
+      <link
+        rel="canonical"
+        href="https://copy-of-copy-of-hddb-fga20m.teleporthq.site/brand-images"
+      />
     </div>
+    <script>
+      (function () {
+        var PROBE_ATTR = 'data-teleport-slider-probe';
+        var PROBE_MAX_LIFETIME_MS = 30000;
+        var SwiperCtor = null;
+        var capturedModules = null;
+        var probeEl = null;
+        var trackedInstances = [];
+        function safeJsonParse(raw) {
+          if (!raw) return null;
+          var decoder = document.createElement('textarea');
+          decoder.innerHTML = raw;
+          try { return JSON.parse(decoder.value); } catch (e) { return null; }
+        }
+        function toPositiveInt(v, fallback) {
+          var n = parseInt(v, 10);
+          return (!isNaN(n) && n > 0) ? n : fallback;
+        }
+        function toSpacing(v, fallback) {
+          // Zero is a legitimate gap, so it must not fall through to the default
+          // the way toPositiveInt makes it.
+          var n = parseInt(v, 10);
+          return (!isNaN(n) && n >= 0) ? n : fallback;
+        }
+        function buildBreakpoints(el) {
+          var raw = safeJsonParse(el.getAttribute('data-breakpoints')) || {};
+          var mobile = raw.mobile || {};
+          var tablet = raw.tablet || {};
+          var desktop = raw.desktop || {};
+          // With no breakpoint map, derive the per-width slide count from the
+          // slider's OWN base config instead of assuming a multi-card carousel.
+          // Hardcoding 3-on-desktop here overrode every single-slide slider that
+          // omits the map — the generator tells the model to omit it for hero
+          // carousels, and the gallery lightbox omitted it too — which fits every
+          // slide onto one page and leaves the arrows and bullets with nowhere to
+          // go. Same derivation the editor uses in flows/slider.ts.
+          var baseSlidesPerView = toPositiveInt(el.getAttribute('data-slides-per-view'), 1);
+          var bps = {};
+          bps[0] = {
+            slidesPerView: toPositiveInt(mobile.slidesPerView, 1),
+            spaceBetween: toSpacing(mobile.spaceBetween, 12),
+          };
+          bps[768] = {
+            slidesPerView: toPositiveInt(tablet.slidesPerView, Math.min(baseSlidesPerView, 2)),
+            spaceBetween: toSpacing(tablet.spaceBetween, 16),
+          };
+          bps[1024] = {
+            slidesPerView: toPositiveInt(desktop.slidesPerView, baseSlidesPerView),
+            spaceBetween: toSpacing(desktop.spaceBetween, 24),
+          };
+          return bps;
+        }
+        function buildConfig(el) {
+          var cfg = {
+            slidesPerView: toPositiveInt(el.getAttribute('data-slides-per-view'), 1),
+            spaceBetween: toPositiveInt(el.getAttribute('data-space-between'), 0),
+            breakpoints: buildBreakpoints(el),
+          };
+          // Carry over the module classes that the CDN bundle loaded
+          // initially (Navigation / Pagination / Autoplay). Without these
+          // the re-instantiated Swiper only has Resize + Observer — the
+          // navigation arrows and pagination bullets become dead.
+          if (capturedModules && capturedModules.length > 0) {
+            cfg.modules = capturedModules.slice();
+          }
+          if (el.getAttribute('data-pagination') === 'true') {
+            var paginationEl = el.querySelector('.swiper-pagination');
+            if (paginationEl) cfg.pagination = { el: paginationEl, clickable: true, type: 'bullets' };
+          }
+          if (el.getAttribute('data-navigation') === 'true') {
+            var nextEl = el.querySelector('.swiper-button-next');
+            var prevEl = el.querySelector('.swiper-button-prev');
+            if (nextEl && prevEl) cfg.navigation = { nextEl: nextEl, prevEl: prevEl };
+          }
+          return cfg;
+        }
+        function captureFromInstance(instance) {
+          if (!instance) return;
+          if (!SwiperCtor && instance.constructor && instance.constructor.name === 'Swiper') {
+            SwiperCtor = instance.constructor;
+          }
+          if (!capturedModules && instance.params && Array.isArray(instance.params.modules)) {
+            // Clone so Swiper's own mutation of params.modules during teardown
+            // does not surprise us on a subsequent re-instantiation.
+            capturedModules = instance.params.modules.slice();
+          }
+        }
+        function createCtorProbe() {
+          // This script is inline in <body>, so it runs while the document is
+          // still parsing — before the deferred CDN bundle executes. The probe
+          // is therefore guaranteed to be present for the bundle's one and only
+          // init pass. It is appended at the end of <body>, after the Next.js
+          // root, so it is also the LAST element that pass reaches: even if the
+          // bundle ever choked on it, every real slider would already be built.
+          var host = document.body || document.documentElement;
+          if (!host) return;
+          try {
+            var el = document.createElement('div');
+            el.setAttribute('data-thq', 'slider');
+            el.setAttribute(PROBE_ATTR, 'true');
+            el.setAttribute('aria-hidden', 'true');
+            el.className = 'swiper';
+            el.style.cssText =
+              'position:absolute;left:-9999px;top:0;width:0;height:0;overflow:hidden;visibility:hidden;pointer-events:none';
+            el.innerHTML =
+              '<div data-thq="slider-wrapper" class="swiper-wrapper">' +
+              '<div data-thq="slider-slide" class="swiper-slide"></div></div>';
+            host.appendChild(el);
+            probeEl = el;
+            // Never leave the probe behind if the CDN bundle fails to load at all.
+            setTimeout(disposeProbe, PROBE_MAX_LIFETIME_MS);
+          } catch (_e) { /* best-effort */ }
+        }
+        function disposeProbe() {
+          if (!probeEl) return;
+          var el = probeEl;
+          probeEl = null;
+          try { if (el.swiper && !el.swiper.destroyed) el.swiper.destroy(true, false); } catch (_e) { /* best-effort */ }
+          try { if (el.parentNode) el.parentNode.removeChild(el); } catch (_e) { /* best-effort */ }
+        }
+        function captureCtorFromProbe() {
+          if (!probeEl) return;
+          if (probeEl.swiper) {
+            captureFromInstance(probeEl.swiper);
+          }
+          if (SwiperCtor) {
+            disposeProbe();
+          }
+        }
+        function trackInstance(instance) {
+          instance.__teleportPatched = true;
+          trackedInstances.push(instance);
+          return instance;
+        }
+        function reapDetachedInstances() {
+          // React unmounts a slider that lives inside a conditionally rendered
+          // subtree — the product gallery lightbox — every time it closes. That
+          // leaves our instance bound to a detached element with its window
+          // resize handler and ResizeObserver still live, and every reopen adds
+          // another one. Only DETACHED elements are reaped: destroy() nulls the
+          // element's swiper reference, which would sabotage a live element whose
+          // instance had since been replaced by someone else.
+          if (trackedInstances.length === 0) return;
+          var kept = [];
+          for (var i = 0; i < trackedInstances.length; i++) {
+            var instance = trackedInstances[i];
+            var el = instance && instance.el;
+            if (!el) continue;
+            if (document.contains(el)) {
+              kept.push(instance);
+              continue;
+            }
+            try { if (!instance.destroyed) instance.destroy(true, false); } catch (_e) { /* best-effort */ }
+          }
+          trackedInstances = kept;
+        }
+        function collectSliders() {
+          var all = document.querySelectorAll('[data-thq="slider"]');
+          var sliders = [];
+          for (var i = 0; i < all.length; i++) {
+            if (all[i].hasAttribute(PROBE_ATTR)) continue;
+            sliders.push(all[i]);
+          }
+          return sliders;
+        }
+        function rebuildPaginationDom(instance) {
+          // Pagination bullets can be re-appended after our construction by
+          // the CDN bundle's scheduled post-init render or by React
+          // reconciliation during SPA back-nav. We re-query the pagination
+          // container from the live instance (rather than a captured
+          // reference) because React may have replaced the container DOM
+          // node during a re-mount.
+          try {
+            if (instance.destroyed) return;
+            var pagEl = instance.pagination && instance.pagination.el;
+            if (pagEl) pagEl.innerHTML = '';
+            if (instance.pagination && typeof instance.pagination.render === 'function') {
+              instance.pagination.render();
+            }
+            if (instance.pagination && typeof instance.pagination.update === 'function') {
+              instance.pagination.update();
+            }
+          } catch (_e) { /* best-effort */ }
+        }
+        function replaceWithFreshInstance(el) {
+          // Destroy the CDN-constructed Swiper and rebuild it with the
+          // proper config up front. Patching in place (setBreakpoint +
+          // update) leaves pagination stuck at the original bullet count
+          // (5 for 5 slides at the default slidesPerView=1), Swiper's
+          // external pagination.render() APPENDS instead of rebuilding,
+          // and there is no other public API to force a clean rebuild of
+          // the pagination subsystem. A fresh construction with the right
+          // breakpoints, pagination el, and navigation els gives us the
+          // correct page count (ceil(slides / slidesPerView)) and the
+          // first bullet correctly marked active.
+          try {
+            var pagEl = el.querySelector('.swiper-pagination');
+            try { el.swiper.destroy(true, true); } catch (_destroyErr) { /* best-effort */ }
+            // Clear any pagination bullets Swiper's destroy left behind so
+            // our new render() does not append to them.
+            if (pagEl) pagEl.innerHTML = '';
+            if (!SwiperCtor) return false;
+            var instance = trackInstance(new SwiperCtor(el, buildConfig(el)));
+            // The CDN bundle schedules a delayed pagination render that
+            // fires even after our destroy-and-recreate, re-appending
+            // bullets into the container. React can also restore stale
+            // bullet nodes from the prior page visit during SPA back-nav
+            // reconciliation. Rebuild at several timings so any late
+            // injection is mopped up.
+            setTimeout(function () { rebuildPaginationDom(instance); }, 100);
+            setTimeout(function () { rebuildPaginationDom(instance); }, 400);
+            setTimeout(function () { rebuildPaginationDom(instance); }, 1000);
+            return true;
+          } catch (_err) {
+            return false;
+          }
+        }
+        var isWorking = false;
+        function ensureSwiper(el) {
+          if (!el) return false;
+          if (el.swiper && el.swiper.__teleportPatched) return true;
+          // Guard against reentry: constructing or modifying a Swiper mutates
+          // the DOM, which re-fires the outer MutationObserver synchronously
+          // and would otherwise loop back into this function against a
+          // half-initialised instance.
+          if (isWorking) return false;
+          isWorking = true;
+          try {
+            if (el.swiper) {
+              // Don't touch a Swiper that the CDN bundle is still constructing
+              // — interfering before it finishes corrupts the layout. The
+              // destroyed check covers the window between destroy and the
+              // next mount.
+              if (el.swiper.destroyed) return false;
+              captureFromInstance(el.swiper);
+              // Rebuild the instance from scratch with the correct config:
+              // the CDN's default config ignores our breakpoints and the
+              // pagination bullet count is locked to the original slide
+              // count. A destroy + re-create is the only way to get the
+              // right page-count pagination plus a correctly marked first
+              // active bullet.
+              return replaceWithFreshInstance(el);
+            }
+            // No .swiper attached — either the CDN bundle hasn't fired yet
+            // (poll will retry), or the element was freshly re-mounted by
+            // Next.js SPA back/forward nav, or a modal just revealed a slider
+            // the bundle never saw. The bundle only inits on the initial
+            // DOMContentLoaded (plus a URL change), so it won't re-init any of
+            // those. Construct our own instance with the captured ctor + modules.
+            if (!SwiperCtor) return false;
+            try {
+              // Clear any stale pagination/navigation DOM that survived the
+              // re-mount so the fresh Swiper's render() doesn't append to
+              // leftover bullets/arrows from the previous page visit.
+              var stalePagination = el.querySelector('.swiper-pagination');
+              if (stalePagination) stalePagination.innerHTML = '';
+              trackInstance(new SwiperCtor(el, buildConfig(el)));
+              return true;
+            } catch (_err) {
+              return false;
+            }
+          } finally {
+            isWorking = false;
+          }
+        }
+        function normalisePaginationCount() {
+          // Defensive cleanup: any time the bootstrapper's trigger fires
+          // (initial load, pageshow, or DOM mutation), reconcile the
+          // pagination DOM with the Swiper instance's own bullet tracking.
+          // The CDN bundle and React's SPA reconciliation can leak extra
+          // bullet elements into the container; this keeps the visible
+          // bullet count aligned with the post-breakpoint page count.
+          var all = collectSliders();
+          for (var i = 0; i < all.length; i++) {
+            var el = all[i];
+            if (!el.swiper || !el.swiper.__teleportPatched) continue;
+            if (el.swiper.destroyed) continue;
+            var pagEl = el.swiper.pagination && el.swiper.pagination.el;
+            if (!pagEl) continue;
+            var domCount = pagEl.querySelectorAll('.swiper-pagination-bullet').length;
+            var tracked =
+              el.swiper.pagination && el.swiper.pagination.bullets
+                ? el.swiper.pagination.bullets.length
+                : 0;
+            if (domCount !== tracked && tracked > 0) {
+              rebuildPaginationDom(el.swiper);
+            }
+          }
+        }
+        function ensureAll() {
+          captureCtorFromProbe();
+          reapDetachedInstances();
+          var all = collectSliders();
+          var allDone = all.length > 0;
+          for (var i = 0; i < all.length; i++) {
+            if (!ensureSwiper(all[i])) allDone = false;
+          }
+          normalisePaginationCount();
+          return allDone;
+        }
+        var pollTimer = null;
+        function startPolling() {
+          if (pollTimer) return;
+          var tries = 0;
+          pollTimer = setInterval(function () {
+            tries += 1;
+            if (ensureAll() || tries >= 80) {
+              clearInterval(pollTimer);
+              pollTimer = null;
+            }
+          }, 100);
+        }
+        function trigger() {
+          if (!ensureAll()) startPolling();
+        }
+        // Delay the first trigger until after the CDN bundle has finished
+        // its own init pass. Running too early lets the MutationObserver
+        // fire while the CDN's Swiper is half-constructed and our patch
+        // interferes with layout.
+        function scheduleInitialTrigger() {
+          setTimeout(trigger, 200);
+        }
+        createCtorProbe();
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', scheduleInitialTrigger);
+        } else {
+          scheduleInitialTrigger();
+        }
+        window.addEventListener('pageshow', trigger);
+        // Observe the whole document so Next.js SPA back-nav (which re-mounts
+        // the slider element without an attached .swiper instance) triggers
+        // re-instantiation via the captured ctor. Don't invoke the patch
+        // synchronously on each mutation — the CDN bundle's own Swiper
+        // construction fires many mutations and we'd otherwise patch a
+        // half-initialised instance. Debounce through a macrotask so the
+        // current sync mutation chain finishes first.
+        var mutationPending = false;
+        try {
+          var observer = new MutationObserver(function () {
+            if (mutationPending) return;
+            mutationPending = true;
+            setTimeout(function () { mutationPending = false; trigger(); }, 150);
+          });
+          observer.observe(document.documentElement, { childList: true, subtree: true });
+        } catch (_e) { /* MutationObserver unsupported — polling still covers initial load */ }
+      })();
+    </script>
   </body>
 </html>

@@ -1,8 +1,8 @@
 <CFQUERY name="Vendors" datasource="#DSN#">
 	SELECT v.Vendor, Count(m.Model) AS Cnt
-	FROM DiskSpeed.Vendors v
-	INNER JOIN DiskSpeed.Models m ON (m.VendorID=v.ID)
-	INNER JOIN DiskSpeed.BenchmarkID b ON (b.ModelID=m.ModelID)
+	FROM vendors v
+	INNER JOIN models m ON (m.VendorID=v.ID)
+	INNER JOIN benchmarkid b ON (b.ModelID=m.ModelID)
 	WHERE v.Vendor NOT IN ('','Generic','Unknown')
 	GROUP BY v.Vendor
 	ORDER BY v.Vendor
@@ -51,9 +51,9 @@
 			<!--- Fetch all models with benchmarks --->
 			<CFQUERY name="Drives" datasource="#DSN#">
 				SELECT m.Model, COUNT(b.ModelID) as BenchmarkCount
-				FROM DiskSpeed.Models m
-				INNER JOIN DiskSpeed.Vendors v ON (m.VendorID=v.ID)
-                LEFT JOIN DiskSpeed.BenchmarkID b ON (m.ModelID=b.ModelID)
+				FROM models m
+				INNER JOIN vendors v ON (m.VendorID=v.ID)
+                LEFT JOIN benchmarkid b ON (m.ModelID=b.ModelID)
 				WHERE v.Vendor='#URL.Vendor#'
 				  AND m.Model <> ''
 				GROUP BY m.Model

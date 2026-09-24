@@ -5,9 +5,9 @@
 <!--- Get Vendor Count--->
 <CFQUERY name="Vendors" datasource="#DSN#" cachedwithin="#CreateTimeSpan(0,0,5,0)#">
 	SELECT v.Vendor, Count(m.Model) AS Cnt
-	FROM DiskSpeed.Vendors v
-	INNER JOIN DiskSpeed.Models m ON (m.VendorID=v.ID)
-	INNER JOIN DiskSpeed.BenchmarkID b ON (b.ModelID=m.ModelID)
+	FROM vendors v
+	INNER JOIN models m ON (m.VendorID=v.ID)
+	INNER JOIN benchmarkid b ON (b.ModelID=m.ModelID)
 	WHERE v.Vendor NOT IN ('','Generic','Unknown')
 	GROUP BY v.Vendor
 	ORDER BY v.Vendor
@@ -17,7 +17,7 @@
 <!--- Get Drive Models --->
 <CFQUERY name="TotalModelCnt" datasource="#DSN#" cachedwithin="#CreateTimeSpan(0,0,5,0)#">
 	SELECT distinct Model
-	FROM diskspeed.models
+	FROM models
 	WHERE Model<>''
 </CFQUERY>
 <CFSET HTML=Replace(HTML,"[DriveModels]",NumberFormat(TotalModelCnt.RecordCount,"9,999"))>
@@ -56,9 +56,9 @@
 <!--- Fetch Top 10 Data --->
 <CFQUERY name="TopTenSpinners" datasource="#DSN#" cachedwithin="#CreateTimeSpan(1,0,0,0)#">
 	SELECT v.Vendor, m.Model, m.Capacity, COUNT(b.ID) as Cnt
-	FROM DiskSpeed.Models m
-	INNER JOIN DiskSpeed.Vendors v ON (m.VendorID=v.ID)
-	INNER JOIN DiskSpeed.BenchmarkID b ON (m.ModelID=b.ModelID)
+	FROM models m
+	INNER JOIN vendors v ON (m.VendorID=v.ID)
+	INNER JOIN benchmarkid b ON (m.ModelID=b.ModelID)
 	WHERE v.Vendor <> ''
 	  AND m.SSD=0
 	GROUP BY v.Vendor, m.Model, m.Capacity
@@ -76,9 +76,9 @@
 
 <CFQUERY name="TopTenSSD" datasource="#DSN#" cachedwithin="#CreateTimeSpan(1,0,0,0)#">
 	SELECT v.Vendor, m.Model, m.Capacity, COUNT(b.ID) as Cnt
-	FROM DiskSpeed.Models m
-	INNER JOIN DiskSpeed.Vendors v ON (m.VendorID=v.ID)
-	INNER JOIN DiskSpeed.BenchmarkID b ON (m.ModelID=b.ModelID)
+	FROM models m
+	INNER JOIN vendors v ON (m.VendorID=v.ID)
+	INNER JOIN benchmarkid b ON (m.ModelID=b.ModelID)
 	WHERE v.Vendor <> ''
 	  AND m.SSD=1
 	GROUP BY v.Vendor, m.Model, m.Capacity
@@ -95,17 +95,17 @@
 
 <CFQUERY name="qFastSpinners" datasource="#DSN#" cachedwithin="#CreateTimeSpan(1,0,0,0)#">
 	SELECT v.Vendor, m.Model, m.Capacity, AVG(b2.Speed) as AvgSpeed, COUNT(b.ID) / 11 as TotalBenchmarks
-	FROM DiskSpeed.Vendors v
-	INNER JOIN DiskSpeed.Models m ON (m.VendorID=v.ID AND m.SSD=0)
-	INNER JOIN DiskSpeed.BenchmarkID b ON (b.ModelID=m.ModelID)
-    INNER JOIN DiskSpeed.Benchmarks b2 ON (b2.BenchmarkID=b.ID)
+	FROM vendors v
+	INNER JOIN models m ON (m.VendorID=v.ID AND m.SSD=0)
+	INNER JOIN benchmarkid b ON (b.ModelID=m.ModelID)
+    INNER JOIN benchmarks b2 ON (b2.BenchmarkID=b.ID)
 	WHERE v.Vendor NOT IN ('','Generic','Unknown')
-      AND (SELECT COUNT(*) FROM DiskSpeed.Benchmarks WHERE BenchmarkID=b2.BenchmarkID)=11
+      AND (SELECT COUNT(*) FROM benchmarks WHERE BenchmarkID=b2.BenchmarkID)=11
       AND b2.BenchmarkID IN (
 				SELECT DISTINCT ba.ID
-				FROM DiskSpeed.BenchmarkID ba
+				FROM benchmarkid ba
 				WHERE ba.ModelID=m.ModelID
-				  AND ba.DateStamp=(SELECT MAX(DateStamp) FROM DiskSpeed.BenchmarkID WHERE UserID=ba.UserID AND DriveID=ba.DriveID)
+				  AND ba.DateStamp=(SELECT MAX(DateStamp) FROM benchmarkid WHERE UserID=ba.UserID AND DriveID=ba.DriveID)
 			)
     GROUP BY v.Vendor, m.Model, m.Capacity
     ORDER BY AvgSpeed DESC

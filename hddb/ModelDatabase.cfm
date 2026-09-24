@@ -9,9 +9,9 @@
 
 <CFQUERY name="Vendors" datasource="#DSN#">
 	SELECT v.Vendor, Count(m.Model) AS Cnt
-	FROM DiskSpeed.Vendors v
-	INNER JOIN DiskSpeed.Models m ON (m.VendorID=v.ID)
-	INNER JOIN DiskSpeed.BenchmarkID b ON (b.ModelID=m.ModelID)
+	FROM vendors v
+	INNER JOIN models m ON (m.VendorID=v.ID)
+	INNER JOIN benchmarkid b ON (b.ModelID=m.ModelID)
 	WHERE v.Vendor NOT IN ('','Generic','Unknown')
 	GROUP BY v.Vendor
 	ORDER BY v.Vendor

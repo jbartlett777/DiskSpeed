@@ -1,0 +1,7 @@
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://copy-of-copy-of-hddb-fga20m.teleporthq.site/sitemap.xml
