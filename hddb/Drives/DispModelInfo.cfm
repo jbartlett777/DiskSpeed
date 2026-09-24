@@ -1,7 +1,7 @@
 <CFQUERY name="Revisions" datasource="#DSN#">
 	SELECT m.*
-	FROM DiskSpeed.Models m
-	LEFT JOIN DiskSpeed.Vendors v ON (m.VendorID=v.ID)
+	FROM models m
+	LEFT JOIN vendors v ON (m.VendorID=v.ID)
 	WHERE v.Vendor=<cfqueryparam CFSQLType="CF_SQL_VARCHAR" value="#URL.Vendor#">
 	  AND m.Model=<cfqueryparam CFSQLType="CF_SQL_VARCHAR" value="#URL.Model#">
 	ORDER BY Revision
@@ -21,8 +21,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Model-Database-2 - HDDB</title>
-    <meta property="og:title" content="Model-Database-2 - HDDB" />
+    <title>Model Database - HDDB</title>
+    <meta property="og:title" content=">Model Database - HDDB" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
 
@@ -143,20 +143,20 @@ body, td {
 				<!--- Get the highest reported read speed for the SSD --->
 				<CFQUERY name="SSDSPeed" datasource="#DSN#">
 					SELECT Max(t.Speed) AS MaxSpeed
-					FROM DiskSpeed.Benchmarks t
+					FROM benchmarks t
 					WHERE BenchmarkID IN (
 						SELECT DISTINCT b.ID
-						FROM DiskSpeed.BenchmarkID b
+						FROM benchmarkid b
 						WHERE b.ModelID=#Revisions.ModelID[CR]#
 					)
 				</CFQUERY>
 				<!--- Get total Benchmarks on this drive --->
 				<CFQUERY name="TotalBenchmarks" datasource="#DSN#">
 					SELECT DISTINCT BenchmarkID
-					FROM DiskSpeed.Benchmarks t
+					FROM benchmarks t
 					WHERE BenchmarkID IN (
 						SELECT DISTINCT b.ID
-						FROM DiskSpeed.BenchmarkID b
+						FROM benchmarkid b
 						WHERE b.ModelID=#Revisions.ModelID[CR]#
 					)
 				</CFQUERY>
@@ -224,25 +224,25 @@ body, td {
 		<CFSET AltGraph=0>
 		<CFQUERY name="Bench" datasource="#DSN#">
 			SELECT t.BenchmarkID, t.Spot, t.Speed
-			FROM DiskSpeed.Benchmarks t
+			FROM benchmarks t
 			WHERE BenchmarkID IN (
 				SELECT DISTINCT b.ID
-				FROM DiskSpeed.BenchmarkID b
+				FROM benchmarkid b
 				WHERE b.ModelID=#Revisions.ModelID[CR]#
-				  AND b.DateStamp=(SELECT MAX(DateStamp) FROM DiskSpeed.BenchmarkID WHERE UserID=b.UserID AND DriveID=b.DriveID)
+				  AND b.DateStamp=(SELECT MAX(DateStamp) FROM benchmarkid WHERE UserID=b.UserID AND DriveID=b.DriveID)
 			)
-			  AND (SELECT COUNT(*) FROM DiskSpeed.Benchmarks WHERE BenchmarkID=t.BenchmarkID)=11
+			  AND (SELECT COUNT(*) FROM benchmarks WHERE BenchmarkID=t.BenchmarkID)=11
 		</CFQUERY>
 		<CFIF Bench.RecordCount EQ 0>
 			<CFSET AltGraph=1>
 			<CFQUERY name="Bench" datasource="#DSN#">
 				SELECT t.BenchmarkID, t.Spot, t.Speed
-				FROM DiskSpeed.Benchmarks t
-				WHERE BenchmarkID IN (
+				FROM benchmarks t
+				WHERE benchmarkid IN (
 					SELECT DISTINCT b.ID
-					FROM DiskSpeed.BenchmarkID b
+					FROM benchmarkid b
 					WHERE b.ModelID=#Revisions.ModelID[CR]#
-					  AND b.DateStamp=(SELECT MAX(DateStamp) FROM DiskSpeed.BenchmarkID WHERE UserID=b.UserID AND DriveID=b.DriveID)
+					  AND b.DateStamp=(SELECT MAX(DateStamp) FROM benchmarkid WHERE UserID=b.UserID AND DriveID=b.DriveID)
 				)
 			</CFQUERY>
 		</CFIF>

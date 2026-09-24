@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "parcel-bundler": "^1.6.1"
+    "parcel-bundler": "^1.6.1",
+    "react-chartjs-2": "5.2.0",
+    "@teleporthq/react-components": "latest",
+    "next": "^12.1.10"
   },
   "scripts": {},
   "devDependencies": {}

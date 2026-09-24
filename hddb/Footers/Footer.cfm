@@ -1,4 +1,0 @@
-<CFOUTPUT>
-</body>
-</html>
-</CFOUTPUT>

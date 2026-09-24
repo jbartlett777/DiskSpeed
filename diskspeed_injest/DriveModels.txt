@@ -1,0 +1,350 @@
+# Model|Interface|RPM|Cache-MB|IMG
+DEFAULT||||default.png
+# Western Digital
+# 300GB
+WD3000JB|ATA100|7200|8|western digital/WD Blue.png
+# 320GB
+WD3200AZRX|SATA 6||64|western digital/WD Green.png
+WD3200AZDX|SATA 6|||western digital/WD Green.png
+# 500GB
+WD5000AADS|SATA 3||32|western digital/WD Green.png
+WD5000AZRX|SATA 6||64|western digital/WD Green.png
+WDBAAY5000ENC|SATA 3|||western digital/WD Green.png
+WD5000AZDX|SATA 6|||western digital/WD Green.png
+WD5000AACS|SATA 2|6400|16|western digital/WD Green.png
+# 640GB
+WD6400AARS|SATA 3||64|western digital/WD Green.png
+WD6400AACS|SATA 3|7200|16|western digital/WD Green.png
+WD6400AAVS|SATA||8|western digital/WD Green.png
+# 750GB
+WD7500AAVS|SATA 3|7200|16|western digital/WD Green.png
+WD7500AADS|SATA 3||32|western digital/WD Green.png
+WD7500AARS|SATA 3||64|western digital/WD Green.png
+WD7500AADS|SATA 3||32|western digital/WD Green.png
+# 1TB
+WD10EADS|SATA 3||32|western digital/WD Green.png
+WD10EZRX|SATA 6||64|western digital/WD Green.png
+WD10EARS|SATA 3|5400|64|western digital/WD Green.png
+WD10EARX|SATA 6||64|western digital/WD Green.png
+WD10EACS|SATA 3||16|western digital/WD Green.png
+WD10EADX|SATA 6||32|western digital/WD Green.png
+# 1.5TB
+WD15EADS|SATA 3||32|western digital/WD Green.png
+WD15EARS|SATA 3|7200|64|western digital/WD Green.png
+WD15EARX|SATA 6||64|western digital/WD Green.png
+WD15EZRX|SATA 3||64|western digital/WD Green.png
+# 2TB
+WD20EZRX|SATA 6||64|western digital/WD Green.png
+WD20EARS|SATA 3|6400|64|western digital/WD Green.png
+WD20EARX|SATA 6||64|western digital/WD Green.png
+WD20EADS|SATA 3||32|western digital/WD Green.png
+WDBAAY0020HNC|SATA 6||64|western digital/WD Green.png
+WD20NPVX|SATA 6||8|western digital/WD Green.png
+WD2002FAEX|SATA 6|7200|64|western digital/WD Black.png
+# 2.5TB
+WD25EZRX|SATA 6||64|western digital/WD Green.png
+# 3TB
+WD30EZRX|SATA 6||64|western digital/WD Green.png
+WD30EZRS|SATA 3||64|western digital/WD Green.png
+# 4TB
+WD40EZRX|SATA 6||64|western digital/WD Green.png
+# 5TB
+WD50EZRX|SATA 6||64|western digital/WD Green.png
+# 6TB
+WD60EZRX|SATA 6||64|western digital/WD Green.png
+#
+WD6002FZWX|SATA 6|7200|128|western digital/WD Black.png
+WD5001FZWX|SATA 6|7200|128|western digital/WD Black.png
+WD4003FZEX|SATA 6|7200|128|western digital/WD Black.png
+WD3003FZEX|SATA 6|7200|62|western digital/WD Black.png
+WD2003FZEX|SATA 6|7200|62|western digital/WD Black.png
+WD1003FZEX|SATA 6|7200|62|western digital/WD Black.png
+WD5003AZEX|SATA 6|7200|62|western digital/WD Black.png
+WD10JPLX|SATA 6|7200|32|western digital/WD Black Mobile.png
+WD7500BPKX|SATA 6|7200|16|western digital/WD Black Mobile.png
+WD5000BPKX|SATA 6|7200|16|western digital/WD Black Mobile.png
+WD3200LPLX|SATA 6|7200|32|western digital/WD Black Mobile.png
+WD2500LPLX|SATA 6|7200|32|western digital/WD Black Mobile.png
+WD20NPVZ|SATA 6|5400||western digital/WD Blue Mobile.png
+WD10JPVX|SATA 6|5400||western digital/WD Blue Mobile.png
+WD7500BPVX|SATA 6|5400||western digital/WD Blue Mobile.png
+WD5000LPVX|SATA 6|5400||western digital/WD Blue Mobile.png
+WD3200LPCX|SATA 6|5400||western digital/WD Blue Mobile.png
+WD60EZRZ|SATA 6|5400||western digital/WD Blue.png
+WD50EZRZ|SATA 6|5400||western digital/WD Blue.png
+WD40EZRZ|SATA 6|5400||western digital/WD Blue.png
+WD30EZRZ|SATA 6|5400||western digital/WD Blue.png
+WD20EZRZ|SATA 6|5400||western digital/WD Blue.png
+WD10EZEX|SATA 6|7200||western digital/WD Blue.png
+WD5000AAKX|SATA 6|7200||western digital/WD Blue.png
+WD40E31X|SATA 6||64|western digital/WD Blue SSHD.png
+WD10J31X|SATA 6||64|western digital/WD Blue SSHD.png
+WD100PURZ|SATA 6|5400|256|western digital/WD Purple.png
+WD80PUZX|SATA 6|5400|128|western digital/WD Purple.png
+WD60PURX|SATA 6|5400|64|western digital/WD Purple.png
+WD40PURX|SATA 6|5400|64|western digital/WD Purple.png
+WD30PURX|SATA 6|5400|64|western digital/WD Purple.png
+WD20PURX|SATA 6|5400|64|western digital/WD Purple.png
+WD10PURX|SATA 6|5400|64|western digital/WD Purple.png
+WD100EFAX|SATA 6|5400|256|western digital/WD Red.png
+WD80EFZX|SATA 6|5400|128|western digital/WD Red.png
+WD60EFRX|SATA 6|5400|64|western digital/WD Red.png
+WD50EFRX|SATA 6|5400|64|western digital/WD Red.png
+WD40EFRX|SATA 6|5400|64|western digital/WD Red.png
+WD30EFRX|SATA 6|5400|64|western digital/WD Red.png
+WD20EFRX|SATA 6|5400|64|western digital/WD Red.png
+WD10JFCX|SATA 6|5400|16|western digital/WD Red.png
+WD7500BFCX|SATA 6|5400|16|western digital/WD Red.png
+WD101KRYZ|SATA 6|7200|256|western digital/WD Gold.png
+WD8002FRYZ|SATA 6|7200|128|western digital/WD Gold.png
+WD6002FRYZ|SATA 6|7200|128|western digital/WD Gold.png
+WD4002FYYZ|SATA 6|7200|128|western digital/WD Gold.png
+WD2005FBYZ|SATA 6|7200|128|western digital/WD Gold.png
+WD1005FBYZ|SATA 6|7200|128|western digital/WD Gold.png
+WD5003ABYZ|SATA 6|7200|64|western digital/WD Re.png
+WD2503ABYZ|SATA 6|7200|64|western digital/WD Re.png
+WD101KFBX|SATA 6|7200|256|western digital/WD Red Pro.png
+WD8001FFWX|SATA 6|7200|128|western digital/WD Red Pro.png
+WD6002FFWX|SATA 6|7200|128|western digital/WD Red Pro.png
+WD4002FFWX|SATA 6|7200|64|western digital/WD Red Pro.png
+WD2002FFSX|SATA 6|7200|64|western digital/WD Red Pro.png
+# Seagate
+ST2000DM009|SATA 6|7200|128|seagate/ST2000DM009.png
+ST4000DM005|SATA 6||64|seagate/ST4000DM005.png
+ST2000DM007||||seagate/ST2000DM007.png
+ST3000DM008||||seagate/ST3000DM008.png
+ST3000LM024||||seagate/ST3000LM024.png
+ST4000LM024||||seagate/ST4000LM024.png
+ST5000LM000||||seagate/ST5000LM000.png
+ST1000DM010||||seagate/ST1000DM010.png
+ST500DM009||||seagate/ST500DM009.png
+ST2000VX008|SATA 6||64|seagate/ST2000VX008.png
+ST4000VX007|SATA 6||64|seagate/ST4000VX007.png
+ST6000VX0023|SATA 6||256|seagate/ST6000VX0023.png
+ST2000LV000||||seagate/ST2000LV000.png
+ST1000LM048||||seagate/ST1000LM048.png
+ST2000LM015||||seagate/ST2000LM015.png
+ST500LM030||||seagate/ST500LM030.png
+ST4000DM006|SATA 6|7200|128|seagate/ST4000DM006.png
+ST6000DM004|SATA 6|7200|256|seagate/ST6000DM004.png
+ST8000DM005|SATA 6|7200|256|seagate/ST8000DM005.png
+ST8000DM004||||seagate/ST8000DM004.png
+ST10000DM0004|SATA 6|7200|256|seagate/ST10000DM0004.png
+ST1000DX002||||seagate/ST1000DX002.png
+ST2000DX002||||seagate/ST2000DX002.png
+ST1000LX015||||seagate/ST1000LX015.png
+ST2000LX001||||seagate/ST2000LX001.png
+ST500LX025||||seagate/ST500LX025.png
+ST1000VN002|SATA 6|5900|64|seagate/ST1000VN002.png
+ST2000NE0025|SATA 6|7200|128|seagate/ST2000NE0025.png
+ST2000VN004|SATA 6|5900|64|seagate/ST2000VN004.png
+ST4000VN008|SATA 6|5900|64|seagate/ST4000VN008.png
+ST3000VN007|SATA 6|5900|64|seagate/ST3000VN007.png
+ST6000VN0041|SATA 6|7200|128|seagate/ST6000VN0041.png
+ST8000VN0022|SATA 6|7200|256|seagate/ST8000VN0022.png
+ST10000VN0004|SATA 6|7200|256|seagate/ST10000VN0004.png
+ST4000NE0025|SATA 6|7200|128|seagate/ST4000NE0025.png
+ST6000NE0021|SATA 6|7200|256|seagate/ST6000NE0021.png
+ST8000NE0021|SATA 6|7200|256|seagate/ST8000NE0021.png
+ST8000NE0004|SATA 6|7200|256|seagate/ST8000NE0004.png
+ST10000NE0004|SATA 6|7200|256|seagate/ST10000NE0004.png
+ST1000VX005|SATA 6||64|seagate/ST1000VX005.png
+ST3000VX010|SATA 6||64|seagate/ST3000VX010.png
+ST8000VX0022|SATA 6||256|seagate/ST8000VX0022.png
+ST10000VX004||||seagate/ST10000VX004.png
+ST10000VX0004|SATA 6||256|seagate/ST10000VX0004.png
+# 250GB
+ST250DM000|SATA 6||16|seagate/Desktop.png
+# 320GB
+ST320DM000|SATA 6||16|seagate/Desktop 320GB.png
+# 500GB
+ST35006||7200||seagate/Desktop HDD 500GB.png
+ST35004||7200||seagate/Desktop HDD 500GB.png
+ST35003||7200||seagate/Desktop HDD 500GB.png
+ST500DM||7200||seagate/Desktop HDD 500GB.png
+ST500DM002|SATA 6||16|seagate/Desktop HDD 500GB.png
+# 750GB
+#ST37503||7200||
+#ST37506||7200||
+#ST37505||7200||
+# 1TB
+ST310003||7200||seagate/Barracuda 1TB.png
+ST310006||7200||seagate/Barracuda 1TB.png
+ST310005||7200||seagate/Barracuda 1TB.png
+ST1000DM||7200||seagate/Barracuda 1TB.png
+ST1000DL||5900||seagate/Barracuda 1TB.png
+ST31000528AS|SATA 6|7200|32|seagate/Barracuda 1TB.png
+ST31000333AS|SATA 3|7200|32|seagate/Barracuda 1TB.png
+ST31000524AS|SATA 6|7200|32|seagate/Barracuda 1TB.png
+ST31000524NS|SATA 3|7200|32|seagate/Barracuda 1TB.png
+ST31000340SV|SATA 3|7200|32|seagate/Enterprise 1TB.png
+ST1000NM0043|SAS 6|7200|128|seagate/Enterprise 1TB.png
+ST31000425SS|SAS 6|7200|16|seagate/Barracuda 1TB.png
+ST1000NM0055|SAS 12|7200|128|seagate/Enterprise 1TB.png
+ST1000NM0045|SAS 12|7200|128|seagate/Enterprise 1TB.png
+ST1000NM0011|SATA 6|7200|64|seagate/Enterprise 1TB.png
+ST1000VN000|SATA 6||64|seagate/NAS.png
+ST1000VX|SATA 6||64|seagate/Surveillance 1TB.png
+ST1000VX003|SATA 6||64|seagate/Surveillance 1TB.png
+ST1000DM004|SATA 6||64|seagate/Barracuda 1TB.png
+ST1000DM003|SATA 6||64|seagate/Barracuda 1TB.png
+ST1000NM0033|SATA 6|7200|128|seagate/Enterprise 1TB.png
+ST1000NM0023|SAS 6|7200|128|seagate/Enterprise 1TB.png
+ST1000NM0065|SATA 6|7200|128|seagate/Enterprise 1TB.png
+ST1000NM0075|SAS 12|7200|128|seagate/Enterprise 1TB.png
+ST1000NM0001|SAS 6|7200|64|seagate/Enterprise 1TB.png
+ST31000424SS|SAS 6|7200|16|seagate/Enterprise 1TB.png
+ST1000VX001|SATA 6||64|seagate/Surveillance 1TB.png
+ST1000VM002|SATA 6|5900|64|seagate/Surveillance 1TB.png
+# 1.5TB
+#ST315005||5900||
+#ST1500DM||7200||
+#ST1500DL||5900||
+#ST315003||7200||
+ST2000DL003|SATA 6|5900|64|seagate/Desktop HDD 2TB.png
+ST320005||5900||seagate/Desktop HDD 2TB.png
+ST320006|SATA 6|7200||seagate/Desktop HDD 2TB.png
+ST2000DM00||64||seagate/Desktop HDD 2TB.png
+STBD20001|SATA 6|7200|64|seagate/Desktop HDD 2TB.png
+ST2000DL|SATA 3|5900|32|seagate/Desktop HDD 2TB.png
+ST600MM0208|SAS 12|10000|128|seagate/ST600MM0208.png
+ST900MM0128|SAS12|10000|128|seagate/Enterprise 10K.png
+# 1.2TB
+ST1200MM0158|SAS12|10000|128|seagate/Enterprise 10K.png
+ST1200MM0017|SAS 6|10000|64|seagate/Enterprise 10K 1.2TB.png
+# 1.8TB
+ST1800MM0128|SAS 12|10000|128|seagate/Enterprise 10K 1.8TB.png
+# 2TB
+ST2000DX001|SATA 6||64|seagate/Desktop SSHD 2TB.png
+#Following two same drive
+ST2000NM0033|SATA 6|7200|128|seagate/Enterprise 2TB.png
+MB2000EXWCR|SATA 6|7200|128|seagate/Desktop HDD 2TB.png
+ST2000DM001|SATA 6||64|seagate/Desktop HDD 2TB.png
+ST2000NM0055|SATA 6|7200|128|seagate/Enterprise 2TB.png
+ST2000NM0045|SAS 12|7200|128|seagate/Enterprise 2TB.png
+ST2000VN000|SATA 6||64|seagate/NAS 2TB.png
+ST2000VN0011|SATA 6|7200|128|seagate/NAS 2TB.png
+ST2000NM0125|SATA 6|7200|128|seagate/Enterprise 2TB.png
+ST2000NM0105|SATA 6|7200|128|seagate/Enterprise 2TB.png
+ST2000NM0023|SAS 6|7200|128|seagate/Enterprise 2TB.png
+ST2000NM0115|SAS 12|7200|128|seagate/Enterprise 2TB.png
+ST2000NM0065|SATA 6|7200|128|seagate/Enterprise 2TB.png
+ST2000NM0085|SAS 12|7200|128|seagate/Enterprise 2TB.png
+ST2000NM0135|SAS 12|7200|128|seagate/Enterprise 2TB.png
+ST2000VM003|SATA 6|5900|64|seagate/Surveillance.png
+# 3TB
+ST330006|SATA 6|7200||seagate/Barracuda 3TB.png
+ST3000NC|SATA 6|7200|64|seagate/Barracuda 3TB.png
+ST3000VX002|SATA 6|5900|64|seagate/Surveillance.png
+ST300DM008|SATA 6||64|seagate/Barracuda 3TB.png
+ST3000NM0005|SATA 6|7200|128|seagate/Enterprise 3TB.png
+ST3000NM0033|SATA 6|7200|128|seagate/Enterprise 3TB.png
+ST3000DM001|SATA 6|7200|64|seagate/Desktop 3TB.png
+ST3000VN000|SATA 6||64|seagate/NAS 3TB.png
+ST3000NM0023|SATA 6|7200|64|seagate/Enterprise 3TB.png
+ST3000NM0025|SATA 6|7200|64|seagate/Enterprise 3TB.png
+ST3000NM0053|SATA 6|7200|128|seagate/Enterprise 3TB.png
+ST3000NM0015|SATA 6|7200|128|seagate/Enterprise 3TB.png
+ST3000DM003|SATA 6|5900|64|seagate/Desktop 3TB.png
+ST3000VX005|SATA 6||64|seagate/Surveillance 3TB.png
+ST2000VX003|SATA 6||64|seagate/Surveillance 3TB.png
+ST3000DM002|SATA 6||64|seagate/Desktop 3TB.png
+ST3000VM002|SATA 6|5900|64|seagate/Surveillance 3TB.png
+# 4TB
+ST4000NM0035|SATA 6|7200|128|seagate/Enterprise 4TB.png
+ST4000NM0025|SAS 12|7200|128|seagate/Enterprise 4TB.png
+ST4000VN000|SATA 6||64|seagate/NAS 4TB.png
+ST4000VN0001|SATA 6|7200|128|seagate/NAS 4TB.png
+ST4000VN003|SATA 6|5900|64|seagate/NAS 4TB.png
+ST4000VX002|SATA 6||64|seagate/Surveillance 4TB.png
+ST4000VX000|SATA 6||64|seagate/Surveillance 4TB.png
+ST4000NM0033|SATA 6|7200|128|seagate/Enterprise 4TB.png
+ST4000DM004|SATA 6||256|seagate/Barracuda 4TB.png
+ST4000DM001|SATA 6|5900|128|seagate/Barracuda 4TB.png
+ST4000NM0115|SATA 6|7200|128|seagate/Enterprise 4TB.png
+ST4000NM0085|SATA 6|7200|128|seagate/Enterprise 4TB.png
+ST4000NM0023|SAS 6|7200|128|seagate/Enterprise 4TB.png
+ST4000NM0095|SAS 12|7200|128|seagate/Enterprise 4TB.png
+ST4000NM0135|SAS 12|7200|128|seagate/Enterprise 4TB.png
+ST4000DM000|SATA 3||64|seagate/Desktop 4TB.png
+STBD4000400|SATA 6||64|seagate/Desktop 4TB.png
+ST4000VM000|SATA 6|5900|64|seagate/Surveillance 4TB.png
+STBD4000101|SATA 6|||seagate/Surveillance 4TB.png
+ST4000NM0043|SAS 6|7200|128|seagate/Enterprise 4TB.png
+ST4000NM0075|SAS 12|7200|128|seagate/Enterprise 4TB.png
+ST4000NM0055|SATA 6|7200|128|seagate/Enterprise 4TB.png
+ST4000NM0014|SAS 12|7200|128|seagate/Enterprise 4TB.png
+ST4000NM0063|SAS 6|7200|128|seagate/Enterprise 4TB.png
+ST4000NM0045|SATA 6|7200|128|seagate/Enterprise 4TB.png
+ST4000NM0124|SATA 6|7200|128|seagate/Enterprise 4TB.png
+ST4000NM0024|SATA 6|7200|128|seagate/Enterprise 4TB.png
+ST4000NM0065|SAS 12|7200|128|seagate/Enterprise 4TB.png
+ST4000NM0053|SATA 6|7200|128|seagate/Enterprise 4TB.png
+ST4000NM0034|SAS 12|7200|128|seagate/Enterprise 4TB.png
+ST4000NM0064|SATA 6|7200|128|seagate/Enterprise 4TB.png
+ST4000VN0011|SATA 6|7200|128|seagate/NAS 4TB.png
+ST4000NM0004|SATA 6|7200|128|seagate/Enterprise 4TB.png
+ST4000NM0245|SATA 6|7200|128|seagate/Enterprise 4TB.png
+ST4000NM0125|SAS 12|7200|128|seagate/Enterprise 4TB.png
+ST4000DX001|SATA 6||64|seagate/Desktop SSHD.png
+# 5TB
+ST5000VX0001|SATA 6||128|seagate/Surveillance 5TB.png
+ST5000VN0011|SATA 6|7200|128|seagate/NAS 5TB.png
+ST5000DM000|SATA6|5900|128|seagate/Desktop 5TB.png
+ST5000NM0084|SATA 6|7200|128|seagate/Enterprise.png
+ST5000NM0024|SATA 6|7200|128|seagate/Enterprise.png
+ST5000VN0001|SATA 6|7200|128|seagate/NAS 5TB.png
+ST5000AS0011|SATA 6|5900|128|seagate/Archive.png
+# 6TB
+ST6000NM0235|SATA 6|7200|256|seagate/Enterprise 6TB.png
+ST6000NM0245|SAS 12|7200|256|seagate/Enterprise 6TB.png
+ST6000VN0021|SATA 6||128|seagate/NAS 6TB.png
+ST6000VN0001|SATA 6|7200|128|seagate/NAS 6TB.png
+ST6000VN0031|SATA 6||128|seagate/NAS 6TB.png
+ST6000VX0011|SATA 6||128|seagate/Surveillance 6TB.png
+ST6000VX0001|SATA 6||128|seagate/Surveillance 6TB.png
+ST6000NM0115|SATA 6|7200|256|seagate/Enterprise 6TB.png
+ST6000NM0125|SATA 6|7200|256|seagate/Enterprise 6TB.png
+ST6000NM0105|SAS 12|7200|256|seagate/Enterprise 6TB.png
+ST6000NM0205|SAS 12|7200|256|seagate/Enterprise 6TB.png
+ST6000NM0175|SATA 6|7200|256|seagate/Enterprise 6TB.png
+ST6000NM0004|SATA 6|7200|128|seagate/Enterprise 6TB.png
+ST6000NM0095|SAS 12|7200|256|seagate/Enterprise 6TB.png
+ST6000NM0034|SAS 12|7200|128|seagate/Enterprise 6TB.png
+ST6000NM0195|SAS 12|7200|256|seagate/Enterprise 6TB.png
+ST6000NM0285|SAS 12|7200|256|seagate/Enterprise 6TB.png
+ST6000NM0074|SAS 12|7200|128|seagate/Enterprise 6TB.png
+ST6000NM0014|SAS 12|7200|128|seagate/Enterprise 6TB.png
+ST6000NM0024|SATA 6|7200|128|seagate/Enterprise 6TB.png
+ST6000DM001|SATA 6||128|seagate/Desktop 6TB.png
+STBD6000100|SATA 6||128|seagate/Desktop 6TB.png
+ST6000DX000|SATA 6||128|seagate/Desktop 6TB.png
+# 8TB
+ST8000VX0012|SATA 6||256|seagate/Surveillance.png
+ST8000VX0002|SATA 6||256|seagate/Surveillance.png
+ST8000NM0055|SATA 6|7200|256|seagate/Enterprise 8TB.png
+ST8000NM0045|SATA 6|7200|256|seagate/Enterprise 8TB.png
+ST8000NM0065|SAS 12|7200|256|seagate/Enterprise 8TB.png
+ST8000NM0095|SAS 12|7200|256|seagate/Enterprise 8TB.png
+ST8000NM0115|SATA 6|7200|256|seagate/Enterprise 8TB.png
+ST8000NM0105|SATA 6|7200|256|seagate/Enterprise 8TB.png
+ST8000NM0075|SAS 12|7200|256|seagate/Enterprise 8TB.png
+ST8000NM0085|SAS 12|7200|256|seagate/Enterprise 8TB.png
+ST8000VN0002|SATA 6||256|seagate/NAS 8TB.png
+ST8000NE0011|SATA 6|7200|256|seagate/NAS 8TB.png
+ST8000NE0001|SATA 6|7200|256|seagate/NAS 8TB.png
+ST8000DM002|SATA 6|7200|256|seagate/Desktop 8TB.png
+STBD8000400|SATA 6|||seagate/Desktop 8TB.png
+ST8000AS0002|SATA 6|5900|128|seagate/Archive 8TB.png
+ST8000DM0004|SATA 6|7200|256|seagate/Barracuda 8TB.png
+# 10TB
+ST10000NM0086|SATA 6|7200|256|seagate/Enterprise 10TB.png
+ST10000NM0096|SAS 12|7200|256|seagate/Enterprise 10TB.png
+ST10000NM0016|SATA 6|7200|256|seagate/Enterprise 10TB.png
+ST10000NM0206|SAS 12|7200|256|seagate/Enterprise 10TB.png
+ST10000NM0146|SATA 6|7200|256|seagate/Enterprise 10TB.png
+# Maxtor
+6B300R0|ATA133|7200|16|maxtor/IDE.png
+# SanDisk
+# Samsung
+SSD 850|SATA 6|||samsung/SSD1.png
