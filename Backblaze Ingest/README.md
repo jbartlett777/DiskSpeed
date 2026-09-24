@@ -90,7 +90,7 @@ This script is executed by the app server prior to each script and sets up the e
 
 ## 01_SetPartitionIDsOnSerials.cfm
 Updates the PartitionID column in the backbalze2.serial_numbers table for any table in the backblaze schema that has been partitioned. Used to group
-drives that exist on the smart partition together. It can be skipped until `10_PartitionDBs.cfm` is executed.
+drives that exist on the same partition together. It can be skipped until `10_PartitionDBs.cfm` is executed.
 
 ## 02_DropIndexes_optional.cfm
 If you like to rebuild your indexes after loading a lot of data or wanting to give a minor boost to importing the data, this will drop indexes on the
