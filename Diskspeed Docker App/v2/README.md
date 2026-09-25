@@ -7,3 +7,7 @@ edit the docker settings in UNRAID, the docker image is recreated and any change
 The built-in Lucee admin is at /lucee/admin/index.cfm and the password is "DiskSpeed", defined in the Dockerfile. Also note that the
 above warning that changes will be lost on editing the Docker configuration will cause settings to reset which is also a good failsafe
 if an edit crashes the Lucee server.
+
+The Highcharts directory is stubbed in this repo but you will need to download and install the JS files into the directory. I plan on
+removing Highcharts as a dependency in the future as their license is drifting into a gray area. I've removed it on the HDDB site as it
+was running on my server but it should still be fine to be contained and ran for personal use via a Docker app.
