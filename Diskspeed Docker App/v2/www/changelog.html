@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style type="text/css">
+body {font-family:Arial, Helvetica, sans-serif;}
+.Size24 {font-size:24px;}
+.Underline {text-decoration:underline;}
+</style>
+<span class="Size24 Underline">Change Log</span><br>
+<br>
+<b>Version 2.10.10.3</b>
+<ul>
+	<li>Update strangejourney.net URL to remove the www prefix
+</ul>
+<b>Version 2.10.10.2</b>
+<ul>
+	<li>Skip drives that report it's port number is zero
+</ul>
+<b>Version 2.10.10.1</b>
+<ul>
+	<li>Catch rare spinup error
+	<li>Check for missing "IsSSD" flag during benchmarking
+	<li>Abort benchmarks on drives that work enough to be detected but fails to read
+</ul>
+<b>Version 2.10.10</b>
+<ul>
+	<li>Catch rare error fetching platter info
+	<li>Allow benchmarking of SSD pools
+	<li>Allow benchmarking of USB devices
+	<li>Allow editing of USB devices
+	<li>Correct scaling of left side axis of SSD benchmarks
+</ul>
+<b>Version 2.10.9</b>
+<ul>
+	<li>Update Lucee to the version 6 branch
+	<li>Update Vendor identification
+	<li>Add opt-in/out data collection of SMART data
+	<li>Add detection for invalid hardware configuration file, rescan hardware to recreate if true
+	<li>Add timeout to fetching Vendor & HDDB info during hardware scan process
+	<li>Don't send NVME serial numbers with SMART submission, send firmware version info along with capacity in bytes. Send SSD=0 if NVME=1
+	<li>Add support for empty drives &amp; CD/DVD ROM drives (ignores)
+	<li>Display PCIe version on the controller speed section if data is provided by the controller
+	<li>Fix bad logic for KIOXIA drives while scanning hardware
+</ul>
+<b>Version 2.10.8</b>
+<ul>
+	<li>Allow non-solid state drives in a pool or single drive UNRAID arrays with single parity to be benchmarked
+	<li>Add title (on hover) to drive labels in case they're too long to display
+	<li>Correct benchmark graph from not displaying on some systems with SSD drives
+	<li>Add error trap in case the process that opens up all permissions on generated files gets in a race condition and can't run because it's already running
+	<li>Add missing Mount Drive FAQ images
+	<li>Handle extended Unicode characters in drive info
+	<li>Add an error trap around fetching a drives partition information to catch timeouts
+	<li>Prevent the warning on benchmarking a container with only 4 CPU's visible to Docker from stopping the benchmark process
+</ul>
+<b>Version 2.10.7.2</b>
+<ul>
+	<li>Update parsing of storage controller speed/width information
+</ul>
+<b>Version 2.10.7.1</b>
+<ul>
+	<li>Add speed tooltip to SSD benchmark bar graph
+</ul>
+<b>Version 2.10.7</b>
+<ul>
+	<li>Refactored Solid State benchmark to better saturate the drive connection
+	<li>Add a default 10 second pause before starting the read portion of a SSD benchmark to allow hidden write cache to flush
+	<li>After benchmarking a SSD, display if Trim is supported on the drive's information page
+	<li>If an error happens while benchmarking a drive, display the hidden iframe performing the benchmark to show the error and abort any other benchmark currently in progress.
+	<li>Reformat the Benchmark FAQ screen to make the information more user friendly
+	<li>Various typos
+	<li>Allow drives with partitions with the same UUID to benchmark if they're not all mounted
+</ul>
+<b>Version 2.10.6</b>
+<ul>
+	<li>Added error trapping around SSD benchmarking trim action in the event the SSD doesn't support the trim operation
+	<li>Benchmark created 3 test files for SSD benchmarking instead of the intended 4. Corrected.
+</ul>
+<b>Version 2.10.5</b>
+<ul>
+	<li>Updated to support Docker 20.10.x for SSD benchmarking. The files that indicate the CPU configuration inside the Docker containers changed.
+	<li>Clarified the missing mountpoint to indicate it's missing in Docker such as "Docker volume mount not detected"
+	<li>Added caching detection logic that will display a warning on the hardware scan if the HTML is being intercepted by a proxy or 3rd party app such as Acronis Cyber Protect Home Office.
+</ul>
+<b>Version 2.10.4</b>
+<ul>
+	<li>Refetch drive image if missing/accidentally deleted by user
+	<li>Remove sync command from permission opening script on docker mounted volume for local saved data
+</ul>
+<b>Version 2.10.3</b>
+<ul>
+	<li>Correct incorrect flagging of drives with no RPM detected as Solid State Device introduced in 2.10.1
+	<li>Overhauled SSD benchmarking logic
+</ul>
+<b>Version 2.10.2.2</b>
+<ul>
+	<li>Do not perform a "nvme show-regs" on NVME drives - buggy PCIe controller interface cards could cause a system hang on repeated use.<br>
+		Symtom: Variable "pmrmsc" returning a string of all f's such as "ffffffffffffffff". Repeated use of the command will result in all
+		values returning all f's and then becoming unresponsive.<br>
+		Known hardware with issue:<br>
+		Maiwo KT015 PCIe NVME/SATA interface card: Silicon Motion, Inc. SM2263EN/SM2263XT SSD Controller (rev 03)
+	<li>Add additional error trapping & logging
+	<li>Fixed an issue that would prevent the SpeedGap detection override on the last scan location on a drive that doesn't fall on a MB boundry in capacity.
+</ul>
+<b>Version 2.10.2</b>
+<ul>
+	<li>Correct issue in detecting partitions on NVME devices
+	<li>Add additional error trapping & logging
+</ul>
+<b>Version 2.10.1</b>
+<ul>
+	<li>Add more robust debugging of hardware scanning
+	<li>Enhance Support file creation to give progress updates. Add addition debug type to include all device informational files
+	<li>Update partition detection to detect single-partition partition maps
+	<li>Add prevention for race conditions on Tomcat logfile deletion which prevents against docker bloat
+	<li>Single-thread hardware scan to prevent multiple simutanious scans
+	<li>Correct SSD detection issue during benchmarking
+</ul>
+<b>Version 2.10</b>
+<ul>
+	<li>Add support for true benchmarking of Solid State Devices
+	<li>Allow editing of drives with an unknown Vendor
+	<li>Remove Benchmarking schart by percentage
+	<li>Update drive change detection to rescan on partition changes
+	<li>Add loop detection to hardware scanning
+</ul>
+<b>Version 2.9.7</b>
+<ul>
+	<li>Correct issue of Drive images not preserving over installing a new version of this application
+	<li>Verify that the DiskSpeed application can write to the externally mapped volume
+	<li>Prevent against some potential race conditions on formatting drive images on full system scan
+	<li>On fresh startup, fetch device's block size from "/sys/class/block/<i>DeviceID</i>/queue/logical_block_size" for use in forcing a drive's spin-up
+</ul>
+<b>Version 2.9.6</b>
+<ul>
+	<li>Updates to support newer version of base OS & Lucee
+</ul>
+<b>Version 2.9.5</b>
+<ul>
+	<li>Sanitize the output from "parted" in the event of a bad partition read such as a loose cable
+</ul>
+<b>Version 2.9.4</b>
+<ul>
+	<li>Add support for OS's that can't fetch full NVME information (Debian 11 RC2)
+</ul>
+<b>Version 2.9.3</b>
+<ul>
+	<li>Check for USB devices with no "idProduct" & "iManufacturer" attribute defined for the USB Tree display
+</ul>
+<b>Version 2.9.2</b>
+<ul>
+	<li>Ignore virtual USB hubs
+</ul>
+<b>Version 2.9.1</b>
+<ul>
+	<li>Edit drive capacity text overlay - fix z-index issue on vertical position slider if the text is rotated
+	<li>Added one-time drive capacity text overlays correction to auto-center X and Y axis if flagged to correct old CSS layout on scanning for drives
+</ul>
+<b>Version 2.9</b>
+<ul>
+	<li>Reworked the logic for fetching drive images from the HDDB, allows restoring your submitted drive images
+</ul>
+<b>Version 2.8.1</b>
+<ul>
+	<li>Add support for storage pools in UNRAID 6.9 that are not part of the cache pool
+</ul>
+<b>Version 2.8</b>
+<ul>
+	<li>Don't include floppy devices
+	<li>Multiply the SMART LBA Read/Written values by the Logical Sector Size instead of the Sector Size
+	<li>Add more validation logic to clean up Vendor/Model combinations
+</ul>
+<b>Version 2.7</b>
+<ul>
+	<li>Open up the permission on the created debug file
+	<li>Added SMART drive information on Drive data view (brief by default, per-drive toggle for displaying all data)
+	<li>Reworked the logic on the Drive information benchmark graph to display the benchmarks in descending order
+	<li>Sorted benchmark graphs on drive information by date descending
+	<li>Reworked the logic on the main page for displaying the most recent benchmarks for each drive to actually display the most recent benchmarks
+	<li>Some history files weren't being saved with open permissions, updated to open them up
+</ul>
+<b>Version 2.6</b>
+<ul>
+	<li>Dropped cache popping logic as it could cause some drives to give very erratic results
+</ul>
+<b>Version 2.5</b>
+<ul>
+	<li>Modified new drive detection logic to submit to the top frame for rescanning drive hardware
+	<li>Added Vendor cleanup to match case of known vendors. "SEAGATE" becomes "Seagate" for example.
+	<li>Added cache popping logic for systems that don't respect the cache bypass command on dd
+	<li>Purge internal tomcat & lucee logs which could cause Docker bloat
+	<li>If an incomplete drive scan leaves a partial hardware profile due to a timeout from a spun down drive, rescan the hardware
+	<li>Display drive ID on benchmark random/sequential seek & latency tests
+	<li>Added informational message that is displayed if a Speed Gap was detected
+</ul>
+<b>Version 2.4 - Incorperating @doron patches</b>
+<ul>
+	<li>Display the correct throughput value when both the controller LnkSta & LnkCap are the same (current & max link speed)
+	<li>Reference table for PCIe controller link speed max throughput updated to add x32
+	<li>Omit "platform" devices such as floppy drives from the scan
+	<li>Ignore "Logical/Physical Sector size" returned from hdparm as it does not properly handle SAS drives. Will implement a better fix later when I get a SAS drive
+</ul>
+<b>Version 2.2</b>
+<ul>
+	<li>Comment out legacy code that returned the fastest speed ever returned for a drive. This was utilized in early betas to find an optimal block size for each
+		drive but ultimately dropped because the OS doesn't use this value.
+	<li>Added logic to detect test anomalies on controller benchmarks where the single drive speed was far slower than the all-drive test
+	<li>Removed the average benchmark speed from the drive benchmarks
+</ul>
+<b>Version 2.1</b>
+<ul>
+	<li>Controller Information: Display the Partiy/Disk/Cache label in the port listing if the drive is assigned
+	<li>Controller Benchmark: Display unRAID's Parity/Disk/Cache labels in graph
+	<li>Update Highcharts from 6.0.7 to 7.1.2
+	<li>Display simultaneous max throughput in the Controller Benchmark graph
+	<li>Add "Avg" to Controller Benchmark graph labels to better clarify the value
+	<li>Dynamically configure Controller Benchmark graph's height based on number of drives attached
+	<li>When editing the drive vendor, display the drive info page instead of the home page
+</ul>
+<b>Version 2.0</b>
+<ul>
+	<li>Added progress bars to the drive benchmarking
+	<li>Rewrote the Controller Benchmark to better test multi-drive performance
+	<li>Disabled drive activity monitor until cosmetic issues with rotated drive images is resolved
+	<li>Redesigned how the application aborts disk scans if the page is refreshed or otherwise left the page doing the scan
+</ul>
+<b>Beta 6a</b>
+<ul>
+	<li>Updated to support in-window vertical scrolling of both the left side drive list and the right side informational display.
+	<li>Viewing the controller information, display if the drive controller is onboard or what PCI/PCI-e slot the controller card is in on the motherboard
+	<li>Changed how the Benchmark abort button works to accommodate how different browsers render frames
+	<li>Redesign the Rotate option on the Drive Edit text overlay from free-form rotation to 90 degree only
+	<li>Trap errors from lsusb & lspci during hardware scanning
+	<li>Fixed line wrapping of drive selection on the Benchmark Drives screen when the All Drives checkbox is unset
+	<li>Modify the Benchmark submission to pass a SHA1 (non-reverseable encryption) hash of the app's unique installation ID and a compressed MD5 hash of the drive's vendor, model, &amp; serial number
+		to support benchmark recovery and allow your benchmark to compare with others.<br>
+		The Unique Installation ID is derived by taking a SHA1 of the unRAID registration name and a SHA1 of the unRAID registration ID and generating a SHA1 of those two SHA1's<br>
+		For non-unRAID installations, a SHA1 of the Motherboard's Serial ID is used.<br>
+		The compressed MD5 takes each 4 byte block of the MD5 of the drive's Serial Number, converts it from Hex to Dec, and adds all the blocks together.
+		The resulting sum is converted to Base36. It is impossible to derive the original values.<br>
+		Example Installation ID: 1946C31AEEF030DB495B0E13AD1403E9CB0AA7A2<br>
+		Example Drive ID: 4BJ3
+	<li>On the first run after upgrading to Beta 6a, all benchmarks will be flagged as not being submitted - so you will get the button to submit them again. This is to allow
+		your Benchmark information to be saved in the new database layout. Benchmark submissions using a version prior to 6a are disabled.
+</ul>
+<b>Beta 5c</b>
+<ul>
+	<li>Added scanning & displaying of the USB Hub tree
+</ul>
+<b>Beta 5b</b>
+<ul>
+	<li>Modified logic for assigning drives to their controller port number &amp; added additional diagnostic debug files if there are issues
+	<li>Removed the 15 second delay if a benchmark was aborted, Lucee is set up to abort threads if the page is navigated away from
+</ul>
+<b>Beta 5a</b>
+<ul>
+	<li>Do not attempt to identify & sort by Port No for USB Controllers
+	<li>Do not list or benchmark USB drives when benchmarking all drives
+</ul>
+<b>Beta 5</b>
+<ul>
+	<li>Rewrote the drive &amp; controller detection to scan for drives and then locate their controller &amp; port info instead of the other way around
+	<li>Rewrote the system bus scan &amp; tree display
+	<li>List all storage controllers first, then NVMe drives together, and then USB drives last under the USB controller they're attached to
+	<li>Display which USB Bus devices are on
+	<li>Added IOPING for drive latency and random/sequential seek tests, performed prior to a benchmark (info will be graphed in future update)
+	<li>Fixed "can not remove element" error during drive scan
+	<li>Added image &amp; text defaults for USB drives
+	<li>Disable benchmarking or editing of USB drives
+	<li>Remove Info icon on USB controllers
+	<li>Do not submit USB drives to the HDDB
+	<li>If the controller Link &amp; Max speed is the same, display one line instead of two with the label "Link &amp; Maximum Link Speed"
+</ul>
+<b>Beta 4b</b>
+<ul>
+	<li>Modify the Debug File creation tool to include all files under 100 bytes with read permissions under /sys/devices/pci*
+</ul>
+<b>Beta 4a</b>
+<ul>
+	<li>Add support to display a red box around drives that are currently showing activity
+</ul>
+<b>Beta 4</b>
+<ul>
+	<li>Fixed drive/controller scanning issue when scanning up the bus tree and not finding a drive
+	<li>Do not display the "Unknown Controller" if only the UNRAID Flash drive is under it
+	<li>Do not benchmark the UNRAID Flash drive
+	<li>Mitigated a race condition where multiple threads might try to write to the same file at the same time during a benchmark
+	<li>Flag the UNRAID Flash drive as nonsubmittable to the HDDB
+	<li>Flag drives with invalid characters in their vendor/model/rev as nonsubmittable to the HDDB
+	<li>Group NVMe drives together after non-NVMe drives
+</ul>
+<b>Beta 3b</b>
+<ul>
+	<li>Remove debug line which had drives testing for only 5 seconds instead of the intended 15
+</ul>
+<b>Beta 3</b>
+<ul>
+	<li>Single thread the process which analyzes &amp; cleans up the benchmarks to prevent against a race condition where two threads try to process it at the same time
+	<li>Reworked how NVMe drives are detected
+	<li>Scan all PCI root ports for controllers
+	<li>Modified IOMMU detection
+	<li>Handle drives rebranded with Apple
+	<li>Drive model cleanup for ADATA, Corsair, LITEONIT
+	<li>If the first word of the Model matches the Vendor, remove it
+	<li>If the drive is not found in the Hard Drive Database, add a link to allow the Vendor to be modified.
+	<li>Move benchmark processing files to Docker contained temp file to allow for auto-cleanup during docker updates
+	<!-- <li>Call the unRAID emhttp spinup URL to spin up Parity/Data/Cache drives -->
+	<li>Detect if a drive was added to the Host after the Docker started
+	<li>Do not submit benchmark results if the drive was tested at fewer than every 10%
+	<li>Do not submit benchmark results if bandwidth capping was detected
+	<li>Do not include labels for drives never benchmarked on the main page benchmark graph
+	<li>Expand the debug file creation to include certain PCI device information to help identify controllers not yet supported
+	<li>Don't display benchmark average if there's only one benchmark done
+	<li>Fix text overlay style error on drive images, hopefully drives will now match the editor
+	<li>Change the label of the "Purge Everything" button to make it more clear and add a confirmation dialog
+</ul>
+<b>Beta 2</b>
+<ul>
+	<li>Change Vendor to Muskin if the model starts with "MKN" - Muskin drives identify as Toshiba.
+	<li>Change Vendor to Crucial if the model starts with "MTFD" - drive Vendor not given
+	<li>Change Vendor to OCZ if the vendor starts with "OCZ-"
+	<li>Change Vendor to "Samsung" if model string starts with "Samsung" - some drives report as "Western Digital"
+	<li>Added Model RegEx "CT[0-9]{3,}(B|M)[A-Z]?[0-9]{2,}SSD" to identify Crucial drives
+	<li>Added Mushkin model cleanup
+	<li>Added Plextor model cleanup
+	<li>Added Port Number for the drives on the Home Screen
+	<li>Added troubleshooting debug file logic
+	<li>Keep drive edits after rescanning the controllers
+	<li>Add Scroll to Top button
+	<li>Save the last benchmark spot as the capacity of the drive instead of the computed offset where it reads from to hit the end of the drive
+</ul>
+<b>Beta 1 - 2018-04-01</b>
+<ul>
+	<li>Modified logic building System Bus Tree to accomidate iommu groups being reported in the path
+	<li>Added abort functionality to Drive Optimization routines
+	<li>Updated Drive Optimization label for Sync Drives to better indicate that only drives of the same firmware/revision on the same controller are synced
+	<li>Reordered drives on Benchmark/Optimization pages to show Parity, then Data, then Cache, then everything else
+	<li>When benchmarking drives and maxing the initial speed gap (difference between min &amp; max reads), increase allowed gap by 5MB each iteration
+	<li>Add ability to skip MaxGap detection during drive benchmarking
+	<li>Add drive benchmark graphs
+	<li>Force a drive scan after updating the Docker image
+	<li>Change logic behind controller bandwidth testing graph height to better handle controllers with few drives attached
+	<li>Add submitting drive information &amp; benchmark data to the HDDB
+	<li>Disable button to determine optimal block size and default to the optimal block size the drive reports which mimmics what the OS will do
+</ul>
+</body>
+</html>
