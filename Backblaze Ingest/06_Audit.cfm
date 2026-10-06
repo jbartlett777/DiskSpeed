@@ -173,12 +173,14 @@ Start at #TimeFormat(Now(),"HH:mm:ss")#<br>
 					<CFSET Header=ValueList(TableColumns.Field)>
 					<CFSET Loc=ListFind(Header,"N_1")>
 					<!--- Check to see if header cells exist in the current file --->
-					<CFLOOP index="CellIDx" from="#ListLen(Header)#" to="#Loc#" step="-1">
-						<CFSET Cell=ListGetAt(Header,CellIDx)>
-						<CFIF Mid(Cell,2,1) EQ "_" AND ListFindNoCase(CSVHeader,Cell) EQ 0>
-							<CFSET Header=ListDeleteAt(Header,CellIDx)>
-						</CFIF>
-					</CFLOOP>
+					<CFIF Loc GT 0>
+						<CFLOOP index="CellIDx" from="#ListLen(Header)#" to="#Loc#" step="-1">
+							<CFSET Cell=ListGetAt(Header,CellIDx)>
+							<CFIF Mid(Cell,2,1) EQ "_" AND ListFindNoCase(CSVHeader,Cell) EQ 0>
+								<CFSET Header=ListDeleteAt(Header,CellIDx)>
+							</CFIF>
+						</CFLOOP>
+					</CFIF>
 					<!--- Duplicate CSVRecords with the included ModelID & SerialID columns --->
 					<CFSET ModelID=Cache[Models.Model[ModelIDx]].ModelID>
 					<CFQUERY name="CSVRecords2" dbtype="Query">
