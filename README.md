@@ -1,3 +1,6 @@
+# Loading the Backblaze data
+Please see the "Backblaze Ingest" folder
+
 # Hard Drive & Controller Benchmarking
 
 Jump to
