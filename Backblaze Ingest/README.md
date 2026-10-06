@@ -76,11 +76,16 @@ innodb_buffer_pool_size = 40G   # or 70–80% of RAM
     * Serial_Number (varchar) *Full serial number*
     * First_Date (date) *Date first found*
     * Last_Date (date) *Last date of data, NULL if last day of data is also the last date of the dataset*
+    * ActiveDays (int UN) *Holds the number of days the drive was active* :red_circle:
     * Failed (bit) *Indicates if the CSV had the Failure flag set*
+    * FailedDate (date) *If the drive failed, holds the date it failed, otherwise NULL* :red_circle:
     * PartitionID (tinyint UN) *Represents the partition the drive exists on, used for grouping of inserts*
   * smart *SMART ID reference table*
     * ID (smallint UN PK) *SMART ID value*
     * Name (varchar) *Description of the SMART ID attribute*
+
+> [!NOTE]
+> :red_circle: = new
 
 ## Application.cfm
 This program is executed by the app server prior to each program and sets up the environment.
