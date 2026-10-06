@@ -14,6 +14,7 @@ function o(txt) {
 	document.getElementById('x').innerHTML=txt;
 }
 </script>
+Start at #TS()#<br>
 </CFOUTPUT>
 
 <CFLOOP index="i" from="1" to="#Models.RecordCount#">
@@ -78,6 +79,4 @@ function o(txt) {
 	</CFQUERY>
 </CFLOOP>
 
-
-
-<CFOUTPUT><script>o('Done setting the last active date on drives');</script></CFOUTPUT><CFFLUSH>
+<CFOUTPUT><script>o('#TS()# Done setting the last active date on drives');</script></CFOUTPUT><CFFLUSH>

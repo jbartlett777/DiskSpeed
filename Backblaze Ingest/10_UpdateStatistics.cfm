@@ -27,6 +27,18 @@ Start at #TS()#<br>
 </CFOUTPUT>
 <CFFLUSH>
 
+<!--- Get the first date of the current quarter loaded --->
+<CFQUERY name="MaxDate" datasource="#DSN#">
+	SELECT MAX(LastDate) AS LastDate
+	FROM backblaze2.serial_numbers
+	WHERE LastDate IS NOT NULL
+</CFQUERY>
+<CFSET FirstQuarterDate=CreateDate(
+									Year(MaxDate.LastDate),
+									(Quarter(MaxDate.LastDate) - 1) * 3 + 1,
+									1
+								  )>
+
 <CFLOOP index="CR" from="1" to="#Models.RecordCount#">
 	<CFSET SchemaName=SafeSchemaName(Models.Model[CR])>
 	<CFSET Out("Updating statistics for #Models.Model[CR]# - Total Drives (#CR#/#Models.RecordCount#)")>
@@ -44,6 +56,30 @@ Start at #TS()#<br>
 		SET DriveDays=#Val(SUM.TotalDriveDays)#
 		WHERE ModelID=#Models.ModelID[CR]#
 	</CFQUERY>
+
+	<!--- Get Serials for Model --->
+	<CFQUERY name="Serials" datasource="#DSN#">
+		SELECT SerialID
+		FROM backblaze2.serial_numbers
+		WHERE ModelID=#Models.ModelID[CR]#
+		  AND (
+				 ActiveDays IS NULL
+			  OR LastDate IS NULL
+			  OR LastDate >= '#DateFormat(FirstQuarterDate,"yyyy-mm-dd")#'
+		  )
+	</CFQUERY>
+	<CFSET LastSec=Second(Now())>
+	<CFLOOP index="SID" from="1" to="#Serials.RecordCount#">
+		<CFIF Second(Now()) NEQ LastSec>
+			<CFSET LastSec=Second(Now())>
+			<CFSET Out("Updating statistics for #Models.Model[CR]# - Drive Age (#CR#/#Models.RecordCount#) - #SID#/#Serials.RecordCount#")>
+		</CFIF>
+		<CFQUERY datasource="#DSN#">
+			UPDATE backblaze2.serial_numbers
+			SET ActiveDays=(SELECT COUNT(1) FROM backblaze.#Models.SchemaName[CR]# WHERE SerialID=#Serials.SerialID[SID]#)
+			WHERE SerialID=#Serials.SerialID[SID]#
+		</CFQUERY>
+	</CFLOOP>
 
 	<CFSET Out("Updating statistics for #Models.Model[CR]# - Failed Drives (#CR#/#Models.RecordCount#)")>
 	<CFQUERY name="FailedCounts" datasource="#DSN#">
@@ -73,6 +109,20 @@ Start at #TS()#<br>
 			WHERE ModelID=#Models.ModelID[CR]#
 		</CFQUERY>
 	</CFIF>
+	<!--- Set failed date --->
+	<CFQUERY datasource="#DSN#">
+		UPDATE backblaze2.serial_numbers s
+		SET s.FailedDate=(
+			SELECT Date
+			FROM backblaze.#Models.SchemaName[CR]#
+			WHERE SerialID=s.SerialID
+			AND Failure=1
+			LIMIT 0,1
+		)
+		WHERE s.ModelID=#Models.ModelID[CR]#
+		AND s.Failed=1
+		AND s.FailedDate IS NULL
+	</CFQUERY>
 
 </CFLOOP>
 
